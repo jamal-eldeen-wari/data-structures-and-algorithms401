@@ -22,3 +22,11 @@ Well the approach was used in the arrayShiftInsert is iterative apporach and the
 Well the approach that i used in binary search is the Iterative apporach and the time complexity of this approach is O(logn).
 
 
+# Fibonacci Sequence:
+
+## Code Challenge 4 Whiteboard:
+
+![Fibonacci Sequnce](https://user-images.githubusercontent.com/83535791/135296961-e41e7893-e54e-4436-8dce-b6bde1273008.jpg)
+
+##  Approach & Efficiency
+Well the approach that i used in Fibonacci Sequence is the Iterative apporach and recursive approach as well  and the time complexity of Iterative approach is O(n) and for recursive is O(2^n).
