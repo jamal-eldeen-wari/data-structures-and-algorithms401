@@ -7,6 +7,9 @@ public class Main {
         linkedList.insertNode("Qusai");
 
         linkedList.printList();
+        linkedList.removeNode("Qusai");
+        System.out.println(" After Deletion");
+        linkedList.printList();
 
 
 

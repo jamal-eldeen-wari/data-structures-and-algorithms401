@@ -57,5 +57,28 @@ public class LinkedList {
         }
     }
 
+    public void removeNode(String data){
+        LinkedListNode current;
+        if (head == null){
+            return;
+        }else{
+
+            current = head;
+            while (current.getNext()!= null){
+                if (current.getNext().getData().equals(data)){
+                    current.setNext(current.getNext().getNext());
+                    return;
+                }
+                current = current.getNext();
+            }
+
+
+        }
+
+
+    }
+
+
+
 
 }
