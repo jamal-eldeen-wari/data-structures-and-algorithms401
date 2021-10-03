@@ -18,10 +18,6 @@ public class LinkedListNode {
         this.next = next;
     }
 
-
-
-
-
     public String getData() {
         return data;
     }

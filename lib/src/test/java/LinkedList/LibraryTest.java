@@ -32,5 +32,26 @@ class LibraryTest {
         assertEquals("HEAD -> { a } -> { b } -> { c } -> NULL",linkedList.toString());
     }
 
+    @Test void insertBeforeTest(){
+        LinkedList linkedList = new LinkedList();
+        linkedList.insertNode("Cobra Kai");
+        linkedList.insertNode("Breaking Bad");
+        linkedList.insertNode("Prison Break");
+
+        linkedList.insertBefore("Breaking Bad", "Rocky");
+
+        assertEquals("{Cobra Kai} -> {Rocky} -> {Breaking Bad} -> {Prison Break}", linkedList.toString());
+    }
+
+    @Test void insertAfterTest(){
+        LinkedList linkedList = new LinkedList();
+        linkedList.insertNode("Cobra Kai");
+        linkedList.insertNode("Breaking Bad");
+        linkedList.insertNode("Prison Break");
+
+        linkedList.insertAfter("Breaking Bad", "Rocky");
+        assertEquals("{Cobra Kai} -> {Breaking Bad} -> {Rocky} -> {Prison Break}", linkedList.toString());
+    }
+
 
 }

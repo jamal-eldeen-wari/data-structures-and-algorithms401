@@ -45,8 +45,6 @@ public class LinkedList {
             LinkedListNode current;
             current = head;
 
-            System.out.print("HEAD -> ");
-
             while (current != null) {
                 // moves the current reference along the list
                 System.out.print(current + " -> ");
@@ -76,6 +74,39 @@ public class LinkedList {
         }
 
 
+    }
+
+    public void insertAfter(String data, String newData){
+        LinkedListNode current = head;
+
+        while (current.getNext()!=null){
+            if (current.getNext().getData().equals(data)){
+                LinkedListNode linkedListNode = new LinkedListNode(newData);
+                linkedListNode.setNext(current.getNext());
+                current.setNext(linkedListNode);
+
+            }
+            current= current.getNext();
+        }
+
+    }
+
+    public void insertBefore(String data, String newData){
+        LinkedListNode current = head;
+        LinkedListNode previous = current;
+
+        while (current!=null){
+            if (current.getData().equals(data)){
+                LinkedListNode lln = new LinkedListNode(newData);
+                lln.setNext(current);
+                previous.setNext(lln);
+                break;
+
+            }
+            previous = current;
+            current = current.getNext();
+
+        }
     }
 
 
