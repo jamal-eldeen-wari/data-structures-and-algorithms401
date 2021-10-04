@@ -22,4 +22,16 @@ The three methods used are:
 ## Approach & Efficiency:
 Those three methods that are added thier time complexity is O(n) and space as well 
 
+## WhiteBoard For Linked List For Kth :
 
+
+![KTH element](https://user-images.githubusercontent.com/83535791/135899021-0329fbb3-84ec-4e26-ba02-9779e75a7c6a.png)
+
+## Challenge: 
+We need a method that can traverse a linked list from the end to find specific element.
+
+## Approach & Efficiency:
+The apporach i took today is iterative while building and the BigO notation is O(n) 
+
+## API:
+Kth: It is used to traverse the linkedlist from the end.
