@@ -53,5 +53,20 @@ class LibraryTest {
         assertEquals("{Cobra Kai} -> {Breaking Bad} -> {Rocky} -> {Prison Break}", linkedList.toString());
     }
 
+    @Test void testKTH(){
+        LinkedList linkedList = new LinkedList();
+        linkedList.insertNode("Cobra Kai");
+        linkedList.insertNode("Breaking Bad");
+        linkedList.insertNode("Prison Break");
+        linkedList.insertNode("Rambo");
+        linkedList.insertNode("The Grudge");
+        linkedList.insertNode("Mr. Nice Guy");
+
+        linkedList.kth(3);
+        assertEquals("Prison Break", linkedList.kth(3));
+
+
+    }
+
 
 }

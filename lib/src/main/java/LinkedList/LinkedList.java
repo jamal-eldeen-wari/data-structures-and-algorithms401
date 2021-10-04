@@ -109,6 +109,42 @@ public class LinkedList {
         }
     }
 
+//    public LinkedListNode kth (int position){
+//        LinkedListNode previous = head;
+//        LinkedListNode current = head;
+//
+//        int count = 1;
+//
+//        while(count<= position-1){
+//            current.setNext(current.getNext());
+//            count++;
+//        }
+//        while(current.getData()!=null){
+//            current.setNext(current.getNext());
+//            previous.setNext(previous.getNext());
+//        }
+//        return previous;
+//    }
+
+    public String kth(int position){
+        int count = 0;
+
+        LinkedListNode current = head;
+
+        while (current.getNext()!=null){
+            current = current.getNext();
+            count++;
+        }
+        if (count<position){
+            return "Nothing found";
+        }
+        current = head;
+        for (int i = 1; i<count-position+1; i++){
+            current = current.getNext();
+        }
+//        System.out.println(current.getData());
+        return current.getData();
+    }
 
 
 
