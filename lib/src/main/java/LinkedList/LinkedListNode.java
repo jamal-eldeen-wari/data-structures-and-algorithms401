@@ -9,7 +9,10 @@ public class LinkedListNode {
         this.data = data;
     }
 
-//                                   Setters and Getters
+    public LinkedListNode() {
+    }
+
+    //                                   Setters and Getters
     public LinkedListNode getNext() {
         return next;
     }

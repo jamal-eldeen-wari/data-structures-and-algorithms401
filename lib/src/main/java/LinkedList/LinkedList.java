@@ -1,8 +1,9 @@
 package LinkedList;
 
-public class LinkedList {
+public class LinkedList extends LinkedListNode{
 // this is only used for reference on the actual nodes (It is not a node)
     private LinkedListNode head;
+    int size;
 
 
     public void insertNode(String data){
@@ -22,6 +23,7 @@ public class LinkedList {
             current.setNext(linkedListNode);
 
 
+            size++;
         }
     }
 
@@ -109,22 +111,6 @@ public class LinkedList {
         }
     }
 
-//    public LinkedListNode kth (int position){
-//        LinkedListNode previous = head;
-//        LinkedListNode current = head;
-//
-//        int count = 1;
-//
-//        while(count<= position-1){
-//            current.setNext(current.getNext());
-//            count++;
-//        }
-//        while(current.getData()!=null){
-//            current.setNext(current.getNext());
-//            previous.setNext(previous.getNext());
-//        }
-//        return previous;
-//    }
 
     public String kth(int position){
         int count = 0;
@@ -146,6 +132,42 @@ public class LinkedList {
         return current.getData();
     }
 
+    public  String mergeLists(LinkedList linkedList1, LinkedList linkedList2){
 
+        LinkedListNode n1 = linkedList1.head;
+        LinkedListNode n2 = linkedList2.head;
+        LinkedList zipLinkedList = new LinkedList();
 
+        while (size > 0){
+
+            if(n1 != null){
+                zipLinkedList.insertNode(n1.getData());
+                n1 = n1.getNext();
+            }
+
+            if(n2 != null){
+                zipLinkedList.insertNode(n2.getData());
+                n2 = n2.getNext();
+            }
+
+            size--;
+
+        }
+        return zipLinkedList.toString();
+    }
+
+    public String presentData(){
+        String list = "Head -->  ";
+        LinkedListNode data = head;
+        while (data!=null){
+            list = list + data.getData() +" --> ";
+            data =data.getNext();
+        }
+        return list;
+    }
+
+    @Override
+    public String toString() {
+        return "LinkedList"+"{ "+presentData()+" }";
+    }
 }

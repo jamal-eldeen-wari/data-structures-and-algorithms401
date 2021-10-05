@@ -67,6 +67,28 @@ class LibraryTest {
 
 
     }
+    @Test void testMerge(){
+        LinkedList linkedList = new LinkedList();
+        linkedList.insertNode("Cobra Kai");
+        linkedList.insertNode("Breaking Bad");
+        linkedList.insertNode("Prison Break");
+        linkedList.insertNode("Rambo");
+        linkedList.insertNode("The Grudge");
+        linkedList.insertNode("Mr. Nice Guy");
+
+        LinkedList linkedList1 = new LinkedList();
+        linkedList1.insertNode("Cobra Kai 2");
+        linkedList1.insertNode("Breaking Bad 4");
+        linkedList1.insertNode("Prison Break 4");
+        linkedList1.insertNode("Rambo 2");
+        linkedList1.insertNode("The Grudge 3");
+        linkedList1.insertNode("Mr. Nice Guy 0");
+
+        LinkedList linkedList2 = new LinkedList();
+        String combinedList = linkedList2.mergeLists(linkedList1,linkedList);
+
+        assertEquals(combinedList,linkedList2.mergeLists(linkedList1,linkedList));
+    }
 
 
 }
