@@ -137,8 +137,9 @@ public class LinkedList extends LinkedListNode{
         LinkedListNode n1 = linkedList1.head;
         LinkedListNode n2 = linkedList2.head;
         LinkedList zipLinkedList = new LinkedList();
+        int fullSize = linkedList1.size+ linkedList2.size;
 
-        while (size > 0){
+        while (fullSize > 0){
 
             if(n1 != null){
                 zipLinkedList.insertNode(n1.getData());
@@ -150,7 +151,7 @@ public class LinkedList extends LinkedListNode{
                 n2 = n2.getNext();
             }
 
-            size--;
+            fullSize--;
 
         }
         return zipLinkedList.toString();

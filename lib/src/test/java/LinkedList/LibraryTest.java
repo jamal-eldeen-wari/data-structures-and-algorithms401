@@ -3,6 +3,8 @@
  */
 package LinkedList;
 
+import Queue.Queue;
+import Stack.Stack;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -89,6 +91,141 @@ class LibraryTest {
 
         assertEquals(combinedList,linkedList2.mergeLists(linkedList1,linkedList));
     }
+
+    @Test void testPush(){
+        Stack stack = new Stack();
+        stack.push("Jeff");
+        assertFalse(stack.isEmpty());
+    }
+
+    @Test void testmultiplePushes(){
+        Stack stack = new Stack();
+        stack.push("J");
+        stack.push("M");
+        stack.push("Q");
+        stack.push("K");
+        stack.push("H");
+        assertEquals("Stack{top=StackNode{data='H', next=StackNode{data='K', next=StackNode{data='Q', next=StackNode{data='M', next=StackNode{data='J', next=null}}}}}}",stack);
+    }
+
+    @Test void testPopStack(){
+        Stack stack = new Stack();
+        stack.push("J");
+        stack.push("M");
+        stack.push("Q");
+        stack.push("K");
+        stack.push("H");
+        String popedValue = stack.pop();
+        assertEquals(popedValue,stack.pop());
+    }
+
+    @Test void testMultiplePops(){
+        Stack stack = new Stack();
+        stack.push("J");
+        stack.push("M");
+        stack.push("Q");
+        stack.push("K");
+        stack.push("H");
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        assertTrue(stack.isEmpty());
+    }
+    @Test void testPeek(){
+        Stack stack = new Stack();
+        stack.push("J");
+        stack.push("M");
+        stack.push("Q");
+        stack.push("K");
+        stack.push("H");
+        stack.pop();
+        String data = stack.peek();
+        assertEquals(data,stack.peek());
+    }
+
+    @Test void testInstatiateStack(){
+        Stack stack = new Stack();
+        assertTrue(stack.isEmpty());
+    }
+
+    @Test void testEmptyStackError(){
+        Stack stack = new Stack();
+        assertEquals("Stack empty", stack.peek());
+        assertEquals("Stack empty",stack.pop());
+    }
+
+    @Test void testEnqueue(){
+        Queue queue = new Queue();
+        queue.enqueue("J");
+        queue.enqueue("M");
+        queue.enqueue("Q");
+        queue.enqueue("K");
+        queue.enqueue("H");
+        assertFalse(queue.isEmpty());
+
+    }
+
+    @Test void testMulitipleEnquque(){
+        Queue queue = new Queue();
+        queue.enqueue("J");
+        queue.enqueue("M");
+        queue.enqueue("Q");
+        queue.enqueue("K");
+        queue.enqueue("H");
+        assertEquals("Queue{front=QueueNode{data='J'}, rear=QueueNode{data='H'}}",queue);
+    }
+    @Test void TestDequue(){
+        Queue queue = new Queue();
+        queue.enqueue("J");
+        queue.enqueue("M");
+        queue.enqueue("Q");
+        queue.enqueue("K");
+        queue.enqueue("H");
+        String data = queue.dequeue();
+        assertEquals(data,queue.dequeue());
+    }
+
+    @Test void testPeekQ(){
+        Queue queue = new Queue();
+        queue.enqueue("J");
+        queue.enqueue("M");
+        queue.enqueue("Q");
+        queue.enqueue("K");
+        queue.enqueue("H");
+        String peek = queue.peek();
+        assertEquals(peek,queue.peek());
+    }
+
+    @Test void emptyQueue(){
+        Queue queue = new Queue();
+        queue.enqueue("J");
+        queue.enqueue("M");
+        queue.enqueue("Q");
+        queue.enqueue("K");
+        queue.enqueue("H");
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+        assertTrue(queue.isEmpty());
+    }
+
+    @Test void instatiateQueue(){
+        Queue queue = new Queue();
+        assertTrue(queue.isEmpty());
+    }
+    @Test void queueException(){
+        Queue queue = new Queue();
+        assertEquals("Queue is empty", queue.dequeue());
+        assertEquals("Queue is empty", queue.peek());
+    }
+
+
+
+
 
 
 }
