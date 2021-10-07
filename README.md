@@ -33,6 +33,8 @@ We need a method that can traverse a linked list from the end to find specific e
 The apporach i took today is iterative while building and the BigO notation is O(n) 
 
 
+
+
 ## API:
 Kth: It is used to traverse the linkedlist from the end.
 
@@ -48,4 +50,29 @@ The apporach i took today is iterative while building and the BigO notation is O
 
 ## API:
 mergeList: It is used to merge two list as an input and return a new list with the values combined.
+
+
+# Stacks and Queue:
+Are linear data structures Stack is a container of objects that are inserted and removed according to the last-in first-out (LIFO) principle. Queue is a container of objects (a linear collection) that are inserted and removed according to the first-in first-out (FIFO) principle.
+
+## Challenge: 
+Is to develop the stacks and queues from scratch.
+
+## Approach & Efficiency:
+The apporach i took today is iterative while building and the BigO notation is O(1) 
+
+## API:
+### Stack:
+1. Push: Nodes or items that are put into the stack are pushed.
+2. Pop - Nodes or items that are removed from the stack are popped.
+3. Top - This is the top of the stack.
+4. Peek - When you peek you will view the value of the top Node in the stack.
+5. IsEmpty - returns true when stack is empty otherwise returns false.
+###Queue
+1. Enqueue - Nodes or items that are added to the queue.
+2. Dequeue - Nodes or items that are removed from the queue. If called when the queue is empty an exception will be raised.
+3. Front - This is the front/first Node of the queue.
+4. Rear - This is the rear/last Node of the queue.
+5. Peek - When you peek you will view the value of the front Node in the queue. If called when the queue is empty an exception will be raised.
+6. IsEmpty - returns true when queue is empty otherwise returns false.
 
