@@ -7,6 +7,7 @@ import Queue.Queue;
 import Stack.Stack;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import Queue.PsudoQueue;
 
 class LibraryTest {
     @Test void someLibraryMethodReturnsTrue() {
@@ -221,6 +222,17 @@ class LibraryTest {
         Queue queue = new Queue();
         assertEquals("Queue is empty", queue.dequeue());
         assertEquals("Queue is empty", queue.peek());
+    }
+
+    @Test void TwoStacksTest(){
+        PsudoQueue psudoQueue = new PsudoQueue();
+        psudoQueue.enqueue("J");
+        psudoQueue.enqueue("K");
+        psudoQueue.enqueue("W");
+
+        String deQueueRes = psudoQueue.deQueue();
+
+        assertEquals(deQueueRes,psudoQueue.deQueue());
     }
 
 

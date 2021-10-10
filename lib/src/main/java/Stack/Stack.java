@@ -4,6 +4,7 @@ public class Stack {
 
 private StackNode top;
 
+
 public void push(String data){
     if (isEmpty()){
         StackNode stackNode = new StackNode(data);
@@ -36,6 +37,7 @@ public String peek(){
 public boolean isEmpty(){
     return top==null;
 }
+
 
     @Override
     public String toString() {

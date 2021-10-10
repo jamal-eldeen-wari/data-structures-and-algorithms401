@@ -2,6 +2,8 @@ import LinkedList.LinkedList;
 import Queue.Queue;
 import Queue.QueueNode;
 import Stack.Stack;
+import Queue.PsudoQueue;
+
 
 public class App {
     public static void main(String[] args) {
@@ -42,27 +44,45 @@ public class App {
 
 //        System.out.println(linkedList.includes("Jamal"));
 
-        Stack stack = new Stack();
-        stack.push("J");
-        stack.push("M");
-        stack.push("Q");
-        stack.push("K");
-        stack.push("H");
+//        Stack stack = new Stack();
+//        stack.push("J");
+//        stack.push("M");
+//        stack.push("Q");
+//        stack.push("K");
+//        stack.push("H");
+//
+//        System.out.println(stack);
+//
+//        System.out.println(stack.pop());
+//        System.out.println(stack.peek());
+//
+//        Queue queue = new Queue();
+//        queue.enqueue("Cobra Kai");
+//        queue.enqueue("Prison Break");
+//        queue.enqueue("Breaking Bad");
+//        queue.enqueue("Rambo");
+//        queue.enqueue("Rocky");
+//        System.out.println(queue);
+//        System.out.println(queue.peek());
+//        System.out.println(queue.dequeue());
 
-        System.out.println(stack);
+        PsudoQueue psudoQueue = new PsudoQueue();
+        psudoQueue.enqueue("J");
+        psudoQueue.enqueue("A");
+        psudoQueue.enqueue("M");
+        psudoQueue.enqueue("A");
+        psudoQueue.enqueue("L");
+        psudoQueue.enqueue("W");
+        psudoQueue.enqueue("A");
+        psudoQueue.enqueue("R");
+        psudoQueue.enqueue("I");
 
-        System.out.println(stack.pop());
-        System.out.println(stack.peek());
-
-        Queue queue = new Queue();
-        queue.enqueue("Cobra Kai");
-        queue.enqueue("Prison Break");
-        queue.enqueue("Breaking Bad");
-        queue.enqueue("Rambo");
-        queue.enqueue("Rocky");
-        System.out.println(queue);
-        System.out.println(queue.peek());
-        System.out.println(queue.dequeue());
+        System.out.println(psudoQueue.deQueue());
+        System.out.println(psudoQueue.deQueue());
+        System.out.println(psudoQueue.deQueue());
+        System.out.println(psudoQueue.deQueue());
+        System.out.println(psudoQueue.deQueue());
+        System.out.println(psudoQueue.deQueue());
 
 
     }
