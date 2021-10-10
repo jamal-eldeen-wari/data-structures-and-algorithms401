@@ -76,3 +76,23 @@ The apporach i took today is iterative while building and the BigO notation is O
 5. Peek - When you peek you will view the value of the front Node in the queue. If called when the queue is empty an exception will be raised.
 6. IsEmpty - returns true when queue is empty otherwise returns false.
 
+
+# Psudo Queue:
+We need a way to traverse the queue by using two stacks. A queue can be implemented using two stacks. Let queue to be implemented be q and stacks used to implement q be stack1 and stack2. q can be implemented in two ways: 
+1.  This method makes sure that oldest entered element is always at the top of stack 1, so that deQueue operation just pops from stack1. To put the element at top of stack1, stack2 is used.
+2.  in en-queue operation, the new element is entered at the top of stack1. In de-queue operation, if stack2 is empty then all the elements are moved to stack2 and finally top of stack2 is returned. 
+
+## Whiteboard for psudo queue:
+![Two Stacks](https://user-images.githubusercontent.com/83535791/136709996-8c460fe5-4b79-463c-9286-18bc2443a3fb.png)
+
+
+## Challenge:
+We need a way to traverse the queue by using two stacks.
+
+## Approach & Efficiency:
+The apporach i took today is iterative while building and the BigO notation is O(n) For the enqueue because of the while loop and dequeue will be O(1).
+
+## API:
+enqueue: It adds a node to the Stack and makes the process similar to the Queue enqueue method but with worst time complexity.
+dequeue: it removes a node from the stack in similar approach to dequeue in queues.
+
