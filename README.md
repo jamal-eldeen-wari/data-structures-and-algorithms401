@@ -99,8 +99,7 @@ dequeue: it removes a node from the stack in similar approach to dequeue in queu
 # Queue Animal Shelter:
 
 ## Whiteboard:
-
-![Shelter Queue](https://user-images.githubusercontent.com/83535791/136859677-236acc60-b066-4c3f-a2a7-1c6e7ec7d89e.png)
+![animalShelter](https://user-images.githubusercontent.com/83535791/136859974-75ffe31f-4878-495f-9615-0a54e7349f9c.png)
 
 ## Challenge: 
 We need a way to store animal data in the queue and remove it from it using FIFO 
