@@ -184,7 +184,7 @@ class LibraryTest {
         queue.enqueue("Q");
         queue.enqueue("K");
         queue.enqueue("H");
-        String data = queue.dequeue();
+        Object data = queue.dequeue();
         assertEquals(data,queue.dequeue());
     }
 
