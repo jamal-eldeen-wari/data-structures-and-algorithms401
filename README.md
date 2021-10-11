@@ -96,3 +96,16 @@ The apporach i took today is iterative while building and the BigO notation is O
 enqueue: It adds a node to the Stack and makes the process similar to the Queue enqueue method but with worst time complexity.
 dequeue: it removes a node from the stack in similar approach to dequeue in queues.
 
+# Queue Animal Shelter:
+
+## Whiteboard:
+
+![Shelter Queue](https://user-images.githubusercontent.com/83535791/136859677-236acc60-b066-4c3f-a2a7-1c6e7ec7d89e.png)
+
+## Challenge: 
+We need a way to store animal data in the queue and remove it from it using FIFO 
+
+## API:
+enqueue: It adds a Animal to the queue.
+dequeue: it removes a Animal from the Queue.
+
