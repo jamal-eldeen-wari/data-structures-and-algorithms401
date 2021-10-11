@@ -92,16 +92,13 @@ public class App {
 //
         Shelter shelter = new Shelter();
 
-        shelter.enqueueShelter(new Cat("LOlo"));
-        shelter.enqueueShelter(new Cat("dog"));
-        shelter.enqueueShelter(new Dog("dkfj"));
+        shelter.enqueueShelter(new Cat("cat"));
+        shelter.enqueueShelter(new Cat("cat"));
+        shelter.enqueueShelter(new Dog("dog"));
 
-        System.out.println(shelter.dequeueShelter("Lolo"));
+        System.out.println(shelter.dequeueShelter("cat"));
         System.out.println(shelter.dequeueShelter("dog"));
-//
-//
-//
-//
+
     }
 }
 

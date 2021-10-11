@@ -8,6 +8,10 @@ import Stack.Stack;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import Queue.PsudoQueue;
+import Queue.Shelter;
+import Queue.Cat;
+import Queue.Dog;
+
 
 class LibraryTest {
     @Test void someLibraryMethodReturnsTrue() {
@@ -234,6 +238,18 @@ class LibraryTest {
 
         assertEquals(deQueueRes,psudoQueue.deQueue());
     }
+
+    @Test void TestShelter(){
+        Shelter shelter = new Shelter();
+
+        shelter.enqueueShelter(new Cat("cat"));
+        shelter.enqueueShelter(new Dog("dog"));
+
+        assertEquals("cat", shelter.dequeueShelter("cat").toString());
+        assertEquals("dog",shelter.dequeueShelter("dog").toString());
+    }
+
+
 
 
 
