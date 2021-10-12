@@ -108,3 +108,16 @@ We need a way to store animal data in the queue and remove it from it using FIFO
 enqueue: It adds a Animal to the queue.
 dequeue: it removes a Animal from the Queue.
 
+## Stack and Queue Brackets:
+
+## Whiteboard:
+![bracket](https://user-images.githubusercontent.com/83535791/137030282-bb8a6aca-ac06-4b2e-a83e-e3a6feb3cd81.png)
+
+## Challenge:
+We need to make a method that deals with brackets and check if each bracket has its openening and closing.
+
+## API:
+Method called Pranthisis that takes a String and returns a boolean value 
+
+
+
