@@ -8,6 +8,8 @@ import Queue.Cat;
 import Queue.Dog;
 import Queue.Animal;
 import Queue.QueueGeneric;
+import Stack.StackNodeGeneric;
+import Stack.StackGeneric;
 
 public class App {
     public static void main(String[] args) {
@@ -90,15 +92,44 @@ public class App {
 //
 //        QueueGeneric queueGeneric = new QueueGeneric();
 //
-        Shelter shelter = new Shelter();
+//        Shelter shelter = new Shelter();
+//
+//        shelter.enqueueShelter(new Cat("cat"));
+//        shelter.enqueueShelter(new Cat("cat"));
+//        shelter.enqueueShelter(new Dog("dog"));
+//
+//        System.out.println(shelter.dequeueShelter("cat"));
+//        System.out.println(shelter.dequeueShelter("dog"));
 
-        shelter.enqueueShelter(new Cat("cat"));
-        shelter.enqueueShelter(new Cat("cat"));
-        shelter.enqueueShelter(new Dog("dog"));
+       
+        System.out.println(paranthisis("{}("));
 
-        System.out.println(shelter.dequeueShelter("cat"));
-        System.out.println(shelter.dequeueShelter("dog"));
+    }
 
+    public static boolean paranthisis(String str){
+        if (str.isEmpty()){
+            return true;
+        }
+        StackGeneric stackNode = new StackGeneric();
+        for (int i = 0; i<str.length();i++){
+            char current = str.charAt(i);
+            if (current == '(' || current == '{' || current =='['){
+                stackNode.pushGeneric(current);
+            }
+            if (current == ')' || current == '}' || current ==']'){
+                if (stackNode.isEmpty()){
+                    return false;
+                }
+                char lastElement = (char) stackNode.peekGeneric();
+                if (current == '}' && lastElement == '{' || current == ')' && lastElement == '(' || current == ']' && lastElement == '['){
+                    stackNode.popGeneric();
+                }else{
+                    return false;
+                }
+
+            }
+        }
+        return stackNode.isEmpty();
     }
 }
 
