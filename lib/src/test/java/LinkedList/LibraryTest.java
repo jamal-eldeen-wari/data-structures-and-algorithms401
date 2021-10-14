@@ -3,6 +3,8 @@
  */
 package LinkedList;
 
+import BST.BinarySearch;
+import BST.BinarySearchNode;
 import Queue.Queue;
 import Stack.Stack;
 import org.junit.jupiter.api.Test;
@@ -250,6 +252,32 @@ class LibraryTest {
     }
 
 
+    @Test void emptyTree(){
+        BinarySearch<Integer> binarySearch = new BinarySearch<>();
+        boolean emptyTree = binarySearch.isEmpty();
+        assertEquals(emptyTree,binarySearch.isEmpty());
+    }
+    @Test void rootTree(){
+        BinarySearch<String> binarySearch = new BinarySearch<>();
+        binarySearch.insert("Jamal");
+        boolean contain = binarySearch.contains("Jamal");
+        assertEquals(contain, binarySearch.contains("Jamal"));
+    }
+
+    @Test void leftNodeInTree(){
+        BinarySearch<Integer> binarySearch = new BinarySearch<>();
+        binarySearch.insert(23);
+        binarySearch.insert(3);
+
+    }
+
+    @Test void rightNodeInTree(){
+        BinarySearch<Integer> binarySearch = new BinarySearch<>();
+        BinarySearchNode<Integer> binarySearchNode = new BinarySearchNode<>(23);
+        BinarySearchNode<Integer> binarySearchNode2 = new BinarySearchNode<>(50);
+//        binarySearch.insert(23);
+//        binarySearch.insert(50);
+    }
 
 
 

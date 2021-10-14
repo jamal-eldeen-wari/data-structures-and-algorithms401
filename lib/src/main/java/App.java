@@ -1,3 +1,4 @@
+import BST.BinarySearch;
 import LinkedList.LinkedList;
 import Queue.Queue;
 import Queue.QueueNode;
@@ -11,7 +12,7 @@ import Queue.QueueGeneric;
 import Stack.StackNodeGeneric;
 import Stack.StackGeneric;
 
-public class App {
+public class App <T>{
     public static void main(String[] args) {
 ////        LinkedList linkedList = new LinkedList();
 ////        linkedList.insertNode("Jamal");
@@ -101,35 +102,79 @@ public class App {
 //        System.out.println(shelter.dequeueShelter("cat"));
 //        System.out.println(shelter.dequeueShelter("dog"));
 
-       
-        System.out.println(paranthisis("{}("));
 
-    }
+//        System.out.println(paranthisis("{}("));
+//        String [] elements = {"Jamal","Khair", "Qusai", "Hi"};
+//        System.out.println(duckDuckGoose(elements,1));
+//
+//    }
+//
+//    public static boolean paranthisis(String str){
+//        if (str.isEmpty()){
+//            return true;
+//        }
+//        StackGeneric stackNode = new StackGeneric();
+//        for (int i = 0; i<str.length();i++){
+//            char current = str.charAt(i);
+//            if (current == '(' || current == '{' || current =='['){
+//                stackNode.pushGeneric(current);
+//            }
+//            if (current == ')' || current == '}' || current ==']'){
+//                if (stackNode.isEmpty()){
+//                    return false;
+//                }
+//                char lastElement = (char) stackNode.peekGeneric();
+//                if (current == '}' && lastElement == '{' || current == ')' && lastElement == '(' || current == ']' && lastElement == '['){
+//                    stackNode.popGeneric();
+//                }else{
+//                    return false;
+//                }
+//
+//            }
+//        }
+//        return stackNode.isEmpty();
+//    }
+//
+//    public static String duckDuckGoose(String [] letters, int n ){
+//        QueueGeneric queueGeneric = new QueueGeneric();
+//
+//        String dif = "";
+//        int size = 0;
+//
+//        if (letters.length==0){
+//            return "Array Empty";
+//        }else{
+//            for (int i = 0; i<letters.length; i++){
+//                queueGeneric.enqueueGeneric(letters[i]);
+//                size++;
+//
+//            }
+//        }
+//        while (size != 1){
+//            for (int k = 0; k<n-1; k++){
+//                dif= (String) queueGeneric.dequeueGeneric();
+//                queueGeneric.enqueueGeneric(dif);
+//            }
+//            size--;
+//        }
+//        return (String) queueGeneric.dequeueGeneric();
+//    }
+        BinarySearch<Integer> binarySearch = new BinarySearch<>();
+        binarySearch.insert(24);
+        binarySearch.insert(35);
+        binarySearch.insert(5);
+        binarySearch.insert(6);
+        binarySearch.insert(48);
+        binarySearch.insert(9);
 
-    public static boolean paranthisis(String str){
-        if (str.isEmpty()){
-            return true;
-        }
-        StackGeneric stackNode = new StackGeneric();
-        for (int i = 0; i<str.length();i++){
-            char current = str.charAt(i);
-            if (current == '(' || current == '{' || current =='['){
-                stackNode.pushGeneric(current);
-            }
-            if (current == ')' || current == '}' || current ==']'){
-                if (stackNode.isEmpty()){
-                    return false;
-                }
-                char lastElement = (char) stackNode.peekGeneric();
-                if (current == '}' && lastElement == '{' || current == ')' && lastElement == '(' || current == ']' && lastElement == '['){
-                    stackNode.popGeneric();
-                }else{
-                    return false;
-                }
 
-            }
-        }
-        return stackNode.isEmpty();
+//        System.out.println(binarySearch);
+        System.out.println(binarySearch.contains(24));
+        System.out.println(binarySearch.contains(35));
+//        System.out.println(binarySearch.contains(5));
+//        System.out.println(binarySearch.contains(6));
+//        System.out.println(binarySearch.contains(48));
+//        System.out.println(binarySearch.contains(9));
     }
 }
 
