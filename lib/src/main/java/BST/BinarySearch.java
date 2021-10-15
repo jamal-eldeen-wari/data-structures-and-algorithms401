@@ -42,17 +42,20 @@ public class BinarySearch <T extends Comparable<T>>{
         }
     }
 
-    public boolean contains(T value){
-      while (root != null){
-          if (value.compareTo(root.getData())>0){
-              root = root.getRightNode();
-          }else if (value.compareTo(root.getData())<0){
-              root = root.getLeftNode();
-          }else {
-              return true;
-          }
-      }
-      return false;
+
+public boolean contains( T x ) {
+    return contains( x, root );
+}
+    private boolean contains( T x, BinarySearchNode<T> node ) {
+        if( node == null )
+            return false;
+        int res = x.compareTo( node.getData() );
+        if( res < 0 )
+            return contains( x, node.getLeftNode() );
+        else if( res > 0 )
+            return contains( x, node.getRightNode());
+        else
+            return true; // Match The node we are searching for
     }
 
     public boolean isEmpty(){

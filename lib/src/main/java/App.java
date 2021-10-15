@@ -171,10 +171,10 @@ public class App <T>{
 //        System.out.println(binarySearch);
         System.out.println(binarySearch.contains(24));
         System.out.println(binarySearch.contains(35));
-//        System.out.println(binarySearch.contains(5));
-//        System.out.println(binarySearch.contains(6));
-//        System.out.println(binarySearch.contains(48));
-//        System.out.println(binarySearch.contains(9));
+        System.out.println(binarySearch.contains(5));
+        System.out.println(binarySearch.contains(6));
+        System.out.println(binarySearch.contains(48));
+        System.out.println(binarySearch.contains(9));
     }
 }
 

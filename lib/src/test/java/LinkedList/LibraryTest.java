@@ -251,7 +251,7 @@ class LibraryTest {
         assertEquals("dog",shelter.dequeueShelter("dog").toString());
     }
 
-
+//                                      Tree
     @Test void emptyTree(){
         BinarySearch<Integer> binarySearch = new BinarySearch<>();
         boolean emptyTree = binarySearch.isEmpty();
@@ -268,15 +268,15 @@ class LibraryTest {
         BinarySearch<Integer> binarySearch = new BinarySearch<>();
         binarySearch.insert(23);
         binarySearch.insert(3);
+        assertEquals(true,binarySearch.contains(3));
 
     }
 
     @Test void rightNodeInTree(){
         BinarySearch<Integer> binarySearch = new BinarySearch<>();
-        BinarySearchNode<Integer> binarySearchNode = new BinarySearchNode<>(23);
-        BinarySearchNode<Integer> binarySearchNode2 = new BinarySearchNode<>(50);
-//        binarySearch.insert(23);
-//        binarySearch.insert(50);
+        binarySearch.insert(23);
+        binarySearch.insert(50);
+        assertEquals(true,binarySearch.contains(50));
     }
 
 
