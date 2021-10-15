@@ -35,6 +35,8 @@ The apporach i took today is iterative while building and the BigO notation is O
 
 
 
+
+
 ## API:
 Kth: It is used to traverse the linkedlist from the end.
 
@@ -120,4 +122,16 @@ We need to make a method that deals with brackets and check if each bracket has 
 Method called Pranthisis that takes a String and returns a boolean value 
 
 
+## Binary Search Tree:
 
+## Challenge:
+Is to create Two methods One for inserting a node to the tree and the other is to to check if the node is in the tree (Contains).
+
+## Approach and Effeciency:
+For both methods i used the recursive as my approach and the BigO notation is:
+1. Insert: O(n).
+2. Contains: O(log n).
+
+## API:
+1. Insert Method: Has a helper method that has all the code in it 
+2. Contains method: Also has a helper method that has all the code in it
