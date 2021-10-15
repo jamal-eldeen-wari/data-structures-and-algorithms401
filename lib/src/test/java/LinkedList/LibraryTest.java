@@ -268,7 +268,7 @@ class LibraryTest {
         BinarySearch<Integer> binarySearch = new BinarySearch<>();
         binarySearch.insert(23);
         binarySearch.insert(3);
-        assertEquals(true,binarySearch.contains(3));
+        assertEquals(3,binarySearch.getRoot().getLeftNode().getData());
 
     }
 
@@ -276,7 +276,7 @@ class LibraryTest {
         BinarySearch<Integer> binarySearch = new BinarySearch<>();
         binarySearch.insert(23);
         binarySearch.insert(50);
-        assertEquals(true,binarySearch.contains(50));
+        assertEquals(50,binarySearch.getRoot().getRightNode().getData());
     }
 
 
