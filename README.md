@@ -129,8 +129,8 @@ Is to create Two methods One for inserting a node to the tree and the other is t
 
 ## Approach and Effeciency:
 For both methods i used the recursive as my approach and the BigO notation is:
-1. Insert: O(n).
-2. Contains: O(log n).
+1. Insert: Time complexity O(n) and Space Complexity is O(1).
+2. Contains: Time Complexity O(log n) and Space Complexity is O(1).
 
 ## API:
 1. Insert Method: Has a helper method that has all the code in it 
