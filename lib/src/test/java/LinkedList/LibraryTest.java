@@ -279,6 +279,18 @@ class LibraryTest {
         assertEquals(50,binarySearch.getRoot().getRightNode().getData());
     }
 
+    @Test void maxTest(){
+        BinarySearch<Integer> binarySearch = new BinarySearch<>();
+        binarySearch.insert(24);
+        binarySearch.insert(35);
+        binarySearch.insert(5);
+        binarySearch.insert(6);
+        binarySearch.insert(48);
+        binarySearch.insert(9);
+        int value  = binarySearch.findMaxValue();
+        assertEquals(value, binarySearch.findMaxValue());
+    }
+
 
 
 

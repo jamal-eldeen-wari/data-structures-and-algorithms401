@@ -58,9 +58,22 @@ public boolean contains( T x ) {
             return true; // Match The node we are searching for
     }
 
+    public Integer findMaxValue() {
+
+        return max(root);
+    }
+
+    public Integer max(BinarySearchNode<T> node){
+        if(node.getRightNode() != null){
+            return max(node.getRightNode());
+        }
+        return (Integer) node.getData();
+    }
+
     public boolean isEmpty(){
         return root == null;
     }
+
 
 
 
