@@ -135,3 +135,19 @@ For both methods i used the recursive as my approach and the BigO notation is:
 ## API:
 1. Insert Method: Has a helper method that has all the code in it 
 2. Contains method: Also has a helper method that has all the code in it
+
+## Binary Search Tree Find Maximum:
+![MaxValue IN a tree](https://user-images.githubusercontent.com/83535791/137639328-78cd085b-905e-4bed-a21e-0134391f049f.png)
+
+## Challenge:
+Is to find the maximum number in the binary search tree.
+
+## Approach and Effecincey:
+The apprach that i used today is recursive to solve this code challenge. For the BigO notation:
+1. Time complexity is O(n).
+2. Space complexity O(1).
+
+## API:
+One method is responsible for searching for the largest value in the tree.
+
+
