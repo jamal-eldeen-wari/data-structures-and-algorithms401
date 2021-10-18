@@ -150,4 +150,17 @@ The apprach that i used today is recursive to solve this code challenge. For the
 ## API:
 One method is responsible for searching for the largest value in the tree.
 
+## Binary Tree Traversal (Breadth):
+![Binary Tree Traversal (Breadth)](https://user-images.githubusercontent.com/83535791/137800716-17ae1a47-e98b-44c1-8810-8909e0be71e4.png)
+
+## Challenge:
+We need to traverse a binary tree in the breadth where it will traverse from the root to the end of the tree.
+
+## Approach and Effecincey:
+The approach that i used today is a mixture of both (recursive and iterative) where the:
+1. Time Complexity: is O(n^2) in worst case.
+2. Space Complexity: is O(n) is worst case.
+
+## API:
+Well, for this challenge it required three methods to solve it.
 
