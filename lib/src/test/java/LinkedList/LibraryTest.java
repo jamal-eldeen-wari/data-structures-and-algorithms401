@@ -5,6 +5,7 @@ package LinkedList;
 
 import BST.BinarySearch;
 import BST.BinarySearchNode;
+import BST.BinaryTree;
 import Queue.Queue;
 import Stack.Stack;
 import org.junit.jupiter.api.Test;
@@ -289,6 +290,18 @@ class LibraryTest {
         binarySearch.insert(9);
         int value  = binarySearch.findMaxValue();
         assertEquals(value, binarySearch.findMaxValue());
+    }
+
+    @Test void breadthTest(){
+
+        BinaryTree<Integer> binaryTree = new BinaryTree<>();
+        binaryTree.root = new BinarySearchNode<>(20);
+        binaryTree.root.setRightNode(new BinarySearchNode<>(10));
+        binaryTree.root.setLeftNode(new BinarySearchNode<>(34));
+        binaryTree.root.getRightNode().setRightNode(new BinarySearchNode<>(30));
+//        binaryTree.printLevelOrder();
+        int h = binaryTree.height(binaryTree.root);
+        assertEquals(h,binaryTree.height(binaryTree.root));
     }
 
 

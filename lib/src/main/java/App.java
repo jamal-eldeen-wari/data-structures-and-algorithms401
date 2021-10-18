@@ -1,4 +1,6 @@
 import BST.BinarySearch;
+import BST.BinarySearchNode;
+import BST.BinaryTree;
 import LinkedList.LinkedList;
 import Queue.Queue;
 import Queue.QueueNode;
@@ -159,24 +161,32 @@ public class App <T>{
 //        }
 //        return (String) queueGeneric.dequeueGeneric();
 //    }
-        BinarySearch<Integer> binarySearch = new BinarySearch<>();
-        binarySearch.insert(24);
-        binarySearch.insert(35);
-        binarySearch.insert(5);
-        binarySearch.insert(6);
-        binarySearch.insert(48);
-        binarySearch.insert(9);
+//        BinarySearch<Integer> binarySearch = new BinarySearch<>();
+//        binarySearch.insert(24);
+//        binarySearch.insert(35);
+//        binarySearch.insert(5);
+//        binarySearch.insert(6);
+//        binarySearch.insert(48);
+//        binarySearch.insert(9);
+//
+//
+////        System.out.println(binarySearch);
+//        System.out.println(binarySearch.contains(24));
+//        System.out.println(binarySearch.contains(35));
+//        System.out.println(binarySearch.contains(5));
+//        System.out.println(binarySearch.contains(6));
+//        System.out.println(binarySearch.contains(48));
+//        System.out.println(binarySearch.contains(9));
+//
+//        System.out.println(binarySearch.findMaxValue());
 
 
-//        System.out.println(binarySearch);
-        System.out.println(binarySearch.contains(24));
-        System.out.println(binarySearch.contains(35));
-        System.out.println(binarySearch.contains(5));
-        System.out.println(binarySearch.contains(6));
-        System.out.println(binarySearch.contains(48));
-        System.out.println(binarySearch.contains(9));
-
-        System.out.println(binarySearch.findMaxValue());
+        BinaryTree<Integer> binaryTree = new BinaryTree<>();
+        binaryTree.root = new BinarySearchNode<>(20);
+        binaryTree.root.setRightNode(new BinarySearchNode<>(10));
+        binaryTree.root.setLeftNode(new BinarySearchNode<>(34));
+        binaryTree.root.getRightNode().setRightNode(new BinarySearchNode<>(30));
+        binaryTree.printLevelOrder();
     }
 }
 
