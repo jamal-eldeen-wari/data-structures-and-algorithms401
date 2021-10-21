@@ -6,6 +6,7 @@ package LinkedList;
 import BST.BinarySearch;
 import BST.BinarySearchNode;
 import BST.BinaryTree;
+import BST.KaryTree;
 import Queue.Queue;
 import Stack.Stack;
 import org.junit.jupiter.api.Test;
@@ -302,6 +303,19 @@ class LibraryTest {
 //        binaryTree.printLevelOrder();
         int h = binaryTree.height(binaryTree.root);
         assertEquals(h,binaryTree.height(binaryTree.root));
+    }
+
+    @Test void karyTreeTest(){
+        KaryTree<Integer> karyTree=new KaryTree<>(3);
+        karyTree.add(5);
+        karyTree.add(12);
+        karyTree.add(6);
+        karyTree.add(10);
+        KaryTree<Integer> karyTreeTest=new KaryTree<>(3);
+        karyTreeTest.add(5);
+        assertEquals(karyTreeTest.getRoot(),karyTree.getRoot());
+
+
     }
 
 

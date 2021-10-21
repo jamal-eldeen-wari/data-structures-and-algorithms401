@@ -1,8 +1,4 @@
-import BST.BinarySearch;
-import BST.BinarySearchNode;
-import BST.BinaryTree;
-import LinkedList.LinkedList;
-import Queue.Queue;
+import BST.*;
 import Queue.QueueNode;
 import Stack.Stack;
 import Queue.PsudoQueue;
@@ -13,6 +9,9 @@ import Queue.Animal;
 import Queue.QueueGeneric;
 import Stack.StackNodeGeneric;
 import Stack.StackGeneric;
+
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class App <T>{
     public static void main(String[] args) {
@@ -181,12 +180,75 @@ public class App <T>{
 //        System.out.println(binarySearch.findMaxValue());
 
 
-        BinaryTree<Integer> binaryTree = new BinaryTree<>();
-        binaryTree.root = new BinarySearchNode<>(20);
-        binaryTree.root.setRightNode(new BinarySearchNode<>(10));
-        binaryTree.root.setLeftNode(new BinarySearchNode<>(34));
-        binaryTree.root.getRightNode().setRightNode(new BinarySearchNode<>(30));
-        binaryTree.printLevelOrder();
+//        BinaryTree<Integer> binaryTree = new BinaryTree<>();
+//        binaryTree.root = new BinarySearchNode<>(20);
+//        binaryTree.root.setRightNode(new BinarySearchNode<>(10));
+//        binaryTree.root.setLeftNode(new BinarySearchNode<>(34));
+//        binaryTree.root.getRightNode().setRightNode(new BinarySearchNode<>(30));
+//
+//        BinaryTree<Integer> binaryTree2 = new BinaryTree<>();
+//        binaryTree2.root = new BinarySearchNode<>(20);
+//        binaryTree2.root.setRightNode(new BinarySearchNode<>(10));
+//        binaryTree2.root.setLeftNode(new BinarySearchNode<>(34));
+//        binaryTree2.root.getRightNode().setRightNode(new BinarySearchNode<>(30));
+//        int res2 = ((BinaryTree<Integer>) binaryTree2).getLeafCount();
+
+//        BinaryTreeNotGeneric binaryTreeNotGeneric = new BinaryTreeNotGeneric();
+//        binaryTreeNotGeneric.setRoot(new BinaryTreeNodeNotGeneric(20));
+//        binaryTreeNotGeneric.getRoot().setLeft(new BinaryTreeNodeNotGeneric(34));
+//        binaryTreeNotGeneric.getRoot().setRight(new BinaryTreeNodeNotGeneric(10));
+//
+//        int res1 = binaryTreeNotGeneric.getLeafCount();
+//
+//        BinaryTreeNotGeneric binaryTreeNotGeneric1 = new BinaryTreeNotGeneric();
+//        binaryTreeNotGeneric1.setRoot(new BinaryTreeNodeNotGeneric(20));
+//        binaryTreeNotGeneric1.getRoot().setLeft(new BinaryTreeNodeNotGeneric(34));
+//
+//
+//        int res = binaryTreeNotGeneric1.getLeafCount();
+//
+//        if (res1 == res){
+//            System.out.println("Equal");
+//        }else{
+//            System.out.println("Not Equal");
+//        }
+        KaryTree <Integer> karyTree=new KaryTree<>(1);
+        karyTree.add(3);
+        karyTree.add(6);
+        karyTree.add(11);
+        karyTree.add(10);
+        karyTree.add(90);
+        karyTree.add(77);
+        System.out.println(fizzBuzzTree(karyTree).getRoot().nodes.get(0).getData());
+
+    }
+
+    public static KaryTree<String> fizzBuzzTree(KaryTree<Integer> node){
+        KaryTree<String> newTree = new KaryTree<>(node.getK());
+        Queue<KaryTreeNode<Integer>> newQueue = new LinkedList<>();
+        if(node.getRoot() != null){
+            newQueue.add(node.getRoot());
+            while(!newQueue.isEmpty()){
+                KaryTreeNode<Integer> current = newQueue.poll();
+                String currentValue;
+                if(current.getData() % 3 == 0 && current.getData() % 5 == 0)
+                    currentValue = "FizzBuzz";
+                else if(current.getData() % 3 == 0){
+                    currentValue="Fizz";
+                }
+                else if(current.getData() % 5 == 0){
+                    currentValue="Buzz";
+                }
+                else{
+                    currentValue=current.getData().toString();
+                }
+                newTree.add(currentValue);
+                if(! current.nodes.isEmpty()){
+                    newQueue.addAll(current.nodes);
+                }
+            }
+        }
+        return newTree;
     }
 }
 
