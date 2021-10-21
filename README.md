@@ -164,3 +164,24 @@ The approach that i used today is a mixture of both (recursive and iterative) wh
 ## API:
 Well, for this challenge it required three methods to solve it.
 
+## Fizz Buzz K-ary Tree:
+
+
+![FizzBuzz](https://user-images.githubusercontent.com/83535791/138319579-e3aaec56-31ae-4b58-be1c-08aad5c7b4a0.png)
+
+## Challenge
+Determine whether or not the value of each node is divisible by 3, 5 or both. Create a new tree with the same structure as the original, but the values modified as follows:
+
++ If the value is divisible by 3, replace the value with “Fizz”
++ If the value is divisible by 5, replace the value with “Buzz”
++ If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
++ If the value is not divisible by 3 or 5, simply turn the number into a String.
+
+## Approach & Efficiency
++ Write a fizzBuzzTree funtion 
++ Then we need to traverse the whole tree and convert each node value to either "Fizz", "Buzz", "FizzBuzz", or a String, depending on if it's divisible by 3, 5, 3 and 5, or neither.
+
+Big O:
+Time: O(N)
+Space: O(N)
+
