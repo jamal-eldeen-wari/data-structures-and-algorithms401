@@ -35,6 +35,8 @@ The apporach i took today is iterative while building and the BigO notation is O
 
 
 
+
+
 ## API:
 Kth: It is used to traverse the linkedlist from the end.
 
@@ -108,3 +110,87 @@ We need a way to store animal data in the queue and remove it from it using FIFO
 enqueue: It adds a Animal to the queue.
 dequeue: it removes a Animal from the Queue.
 
+## Stack and Queue Brackets:
+
+## Whiteboard:
+![bracket](https://user-images.githubusercontent.com/83535791/137030282-bb8a6aca-ac06-4b2e-a83e-e3a6feb3cd81.png)
+
+## Challenge:
+We need to make a method that deals with brackets and check if each bracket has its openening and closing.
+
+## API:
+Method called Pranthisis that takes a String and returns a boolean value 
+
+
+## Binary Search Tree:
+
+## Challenge:
+Is to create Two methods One for inserting a node to the tree and the other is to to check if the node is in the tree (Contains).
+
+## Approach and Effeciency:
+For both methods i used the recursive as my approach and the BigO notation is:
+1. Insert: Time complexity O(n) and Space Complexity is O(1).
+2. Contains: Time Complexity O(log n) and Space Complexity is O(1).
+
+## API:
+1. Insert Method: Has a helper method that has all the code in it 
+2. Contains method: Also has a helper method that has all the code in it
+
+## Binary Search Tree Find Maximum:
+![MaxValue IN a tree](https://user-images.githubusercontent.com/83535791/137639328-78cd085b-905e-4bed-a21e-0134391f049f.png)
+
+## Challenge:
+Is to find the maximum number in the binary search tree.
+
+## Approach and Effecincey:
+The apprach that i used today is recursive to solve this code challenge. For the BigO notation:
+1. Time complexity is O(n).
+2. Space complexity O(1).
+
+## API:
+One method is responsible for searching for the largest value in the tree.
+
+## Binary Tree Traversal (Breadth):
+![Binary Tree Traversal (Breadth)](https://user-images.githubusercontent.com/83535791/137800716-17ae1a47-e98b-44c1-8810-8909e0be71e4.png)
+
+## Challenge:
+We need to traverse a binary tree in the breadth where it will traverse from the root to the end of the tree.
+
+## Approach and Effecincey:
+The approach that i used today is a mixture of both (recursive and iterative) where the:
+1. Time Complexity: is O(n^2) in worst case.
+2. Space Complexity: is O(n) is worst case.
+
+## API:
+Well, for this challenge it required three methods to solve it.
+
+## Fizz Buzz K-ary Tree:
+
+
+![FizzBuzz](https://user-images.githubusercontent.com/83535791/138319579-e3aaec56-31ae-4b58-be1c-08aad5c7b4a0.png)
+
+## Challenge
+Determine whether or not the value of each node is divisible by 3, 5 or both. Create a new tree with the same structure as the original, but the values modified as follows:
+
++ If the value is divisible by 3, replace the value with “Fizz”
++ If the value is divisible by 5, replace the value with “Buzz”
++ If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
++ If the value is not divisible by 3 or 5, simply turn the number into a String.
+
+## Approach & Efficiency
++ Write a fizzBuzzTree funtion 
++ Then we need to traverse the whole tree and convert each node value to either "Fizz", "Buzz", "FizzBuzz", or a String, depending on if it's divisible by 3, 5, 3 and 5, or neither.
+
+Big O:
+Time: O(N)
+Space: O(N)
+
+## Insertion Sort:
+
+![Insertion Sort](https://user-images.githubusercontent.com/83535791/139598778-9243fcab-f776-40dd-b7ca-34de6effb73b.png)
+
+## Challenge:
+We need a method that will sort the array elements in increasing order.
+
+## Approach & Efficiency:
+Time Complexity: O(n^2) Auxiliary Space: O(1)

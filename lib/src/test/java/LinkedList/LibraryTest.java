@@ -3,6 +3,10 @@
  */
 package LinkedList;
 
+import BST.BinarySearch;
+import BST.BinarySearchNode;
+import BST.BinaryTree;
+import BST.KaryTree;
 import Queue.Queue;
 import Stack.Stack;
 import org.junit.jupiter.api.Test;
@@ -249,7 +253,70 @@ class LibraryTest {
         assertEquals("dog",shelter.dequeueShelter("dog").toString());
     }
 
+//                                      Tree
+    @Test void emptyTree(){
+        BinarySearch<Integer> binarySearch = new BinarySearch<>();
+        boolean emptyTree = binarySearch.isEmpty();
+        assertEquals(emptyTree,binarySearch.isEmpty());
+    }
+    @Test void rootTree(){
+        BinarySearch<String> binarySearch = new BinarySearch<>();
+        binarySearch.insert("Jamal");
+        boolean contain = binarySearch.contains("Jamal");
+        assertEquals(contain, binarySearch.contains("Jamal"));
+    }
 
+    @Test void leftNodeInTree(){
+        BinarySearch<Integer> binarySearch = new BinarySearch<>();
+        binarySearch.insert(23);
+        binarySearch.insert(3);
+        assertEquals(3,binarySearch.getRoot().getLeftNode().getData());
+
+    }
+
+    @Test void rightNodeInTree(){
+        BinarySearch<Integer> binarySearch = new BinarySearch<>();
+        binarySearch.insert(23);
+        binarySearch.insert(50);
+        assertEquals(50,binarySearch.getRoot().getRightNode().getData());
+    }
+
+    @Test void maxTest(){
+        BinarySearch<Integer> binarySearch = new BinarySearch<>();
+        binarySearch.insert(24);
+        binarySearch.insert(35);
+        binarySearch.insert(5);
+        binarySearch.insert(6);
+        binarySearch.insert(48);
+        binarySearch.insert(9);
+        int value  = binarySearch.findMaxValue();
+        assertEquals(value, binarySearch.findMaxValue());
+    }
+
+    @Test void breadthTest(){
+
+        BinaryTree<Integer> binaryTree = new BinaryTree<>();
+        binaryTree.root = new BinarySearchNode<>(20);
+        binaryTree.root.setRightNode(new BinarySearchNode<>(10));
+        binaryTree.root.setLeftNode(new BinarySearchNode<>(34));
+        binaryTree.root.getRightNode().setRightNode(new BinarySearchNode<>(30));
+//        binaryTree.printLevelOrder();
+        int h = binaryTree.height(binaryTree.root);
+        assertEquals(h,binaryTree.height(binaryTree.root));
+    }
+
+    @Test void karyTreeTest(){
+        KaryTree<Integer> karyTree=new KaryTree<>(3);
+        karyTree.add(5);
+        karyTree.add(12);
+        karyTree.add(6);
+        karyTree.add(10);
+        KaryTree<Integer> karyTreeTest=new KaryTree<>(3);
+        karyTreeTest.add(5);
+        assertEquals(karyTreeTest.getRoot(),karyTree.getRoot());
+
+
+    }
 
 
 
