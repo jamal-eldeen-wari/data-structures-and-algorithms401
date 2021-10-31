@@ -185,3 +185,12 @@ Big O:
 Time: O(N)
 Space: O(N)
 
+## Insertion Sort:
+
+![Insertion Sort](https://user-images.githubusercontent.com/83535791/139598778-9243fcab-f776-40dd-b7ca-34de6effb73b.png)
+
+## Challenge:
+We need a method that will sort the array elements in increasing order.
+
+## Approach & Efficiency:
+Time Complexity: O(n^2) Auxiliary Space: O(1)
