@@ -1,4 +1,5 @@
 import BST.*;
+import MergeSort.MergeSort;
 import Queue.QueueNode;
 import Stack.Stack;
 import Queue.PsudoQueue;
@@ -10,6 +11,7 @@ import Queue.QueueGeneric;
 import Stack.StackNodeGeneric;
 import Stack.StackGeneric;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -212,15 +214,22 @@ public class App <T>{
 //        }else{
 //            System.out.println("Not Equal");
 //        }
-        KaryTree <Integer> karyTree=new KaryTree<>(1);
-        karyTree.add(3);
-        karyTree.add(6);
-        karyTree.add(11);
-        karyTree.add(10);
-        karyTree.add(90);
-        karyTree.add(77);
-        System.out.println(fizzBuzzTree(karyTree).getRoot().nodes.get(0).getData());
+//        KaryTree <Integer> karyTree=new KaryTree<>(1);
+//        karyTree.add(3);
+//        karyTree.add(6);
+//        karyTree.add(11);
+//        karyTree.add(10);
+//        karyTree.add(90);
+//        karyTree.add(77);
+//        System.out.println(fizzBuzzTree(karyTree).getRoot().nodes.get(0).getData());
 
+
+        MergeSort mergeSort = new MergeSort();
+        int [] numbers = {8,4,23,42,16,15};
+        mergeSort.mergeSort(numbers);
+        for (int i = 0; i<numbers.length; i++){
+            System.out.println(Arrays.toString(numbers));
+        }
     }
 
     public static KaryTree<String> fizzBuzzTree(KaryTree<Integer> node){
