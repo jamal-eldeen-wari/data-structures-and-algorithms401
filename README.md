@@ -194,3 +194,15 @@ We need a method that will sort the array elements in increasing order.
 
 ## Approach & Efficiency:
 Time Complexity: O(n^2) Auxiliary Space: O(1)
+
+## Merge Sort:
+## Challenge:
+We need a method that will sort the array elements in increasing order using merge sort which is known as divide and conquer.
+![MergeSort](https://user-images.githubusercontent.com/83535791/139690796-00de53d0-0ad8-4c15-9960-169f9c4e9ef4.png)
+
+## Approach and Effeciancy:
+Time complexity is O(n) in worst case because it a recursive algorithm
+Space Complexity is O(n) because of the Divide and Conquer.
+
+
+
