@@ -36,6 +36,29 @@ Big O Notation:
 **Time complexity is O(n)** in worst case because it a recursive algorithm
 **Space Complexity is O(n)** because of the Divide and Conquer.
 
+# Quick Sort:
+
+## First Pass:
+
+![QuickSortPass1](https://user-images.githubusercontent.com/83535791/139922766-c58e82ad-87f0-42c8-81d7-8e46e3496387.png)
+
+## Second Pass:
+![QuickSortPass2](https://user-images.githubusercontent.com/83535791/139922805-0f32a98d-272b-46b6-b3c4-a5103e6cae7b.png)
+
+## 3 and 4 pass:
+
+![QuickSortPass3and4](https://user-images.githubusercontent.com/83535791/139922903-1cfb1f57-540a-4907-800e-bbf4f790baa1.png)
+
+## 5 and 6 pass:
+
+![QuickSortPass5and6](https://user-images.githubusercontent.com/83535791/139922949-30ed1089-4574-4a3e-9e40-7864bd3f6a7b.png)
+
+## Effeciency:
+Big O Notation:
+Time complexity is O(nlogn) in worst case because it a recursive algorithm
+Space Complexity is O(n) because of the Divide and Conquer.
+
+
 
 
 
