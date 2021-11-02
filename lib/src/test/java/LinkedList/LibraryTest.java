@@ -7,6 +7,7 @@ import BST.BinarySearch;
 import BST.BinarySearchNode;
 import BST.BinaryTree;
 import BST.KaryTree;
+import MergeSort.MergeSort;
 import Queue.Queue;
 import Stack.Stack;
 import org.junit.jupiter.api.Test;
@@ -15,6 +16,8 @@ import Queue.PsudoQueue;
 import Queue.Shelter;
 import Queue.Cat;
 import Queue.Dog;
+
+import java.util.Arrays;
 
 
 class LibraryTest {
@@ -314,13 +317,11 @@ class LibraryTest {
         KaryTree<Integer> karyTreeTest=new KaryTree<>(3);
         karyTreeTest.add(5);
         assertEquals(karyTreeTest.getRoot(),karyTree.getRoot());
-
-
     }
-
-
-
-
-
-
+    @Test void mergeSort(){
+        MergeSort mergeSort = new MergeSort();
+        int [] numbers = {4,2,8,11,3,6};
+        mergeSort.mergeSort(numbers);
+        assertEquals(Arrays.toString(numbers),Arrays.toString(numbers));
+    }
 }
