@@ -201,8 +201,19 @@ We need a method that will sort the array elements in increasing order using mer
 ![MergeSort](https://user-images.githubusercontent.com/83535791/139690796-00de53d0-0ad8-4c15-9960-169f9c4e9ef4.png)
 
 ## Approach and Effeciancy:
-Time complexity is O(n) in worst case because it a recursive algorithm
+Time complexity is O(nlogn) in worst case because it a recursive algorithm
 Space Complexity is O(n) because of the Divide and Conquer.
 
 
+## Quick Sort:
+## Challenge:
+Quicksort is a divide and conquer algorithm.
+It divides the large array into smaller sub-arrays. And then quicksort recursively sort the sub-arrays.
+
+![QuickSort](https://user-images.githubusercontent.com/83535791/139925282-021c1653-7ab8-4a7d-b25a-eea239f2a162.png)
+
+
+## Approach and Effeciancy:
+Time complexity is O(nlogn) in worst case because it a recursive algorithm
+Space Complexity is O(n) because of the Divide and Conquer.
 
