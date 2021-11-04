@@ -217,3 +217,14 @@ It divides the large array into smaller sub-arrays. And then quicksort recursive
 Time complexity is O(nlogn) in worst case because it a recursive algorithm
 Space Complexity is O(n) because of the Divide and Conquer.
 
+
+# Hash Table:
+
+## Challenge:
+Was to implement the hash table and also do (get method, contain method, add method and also the hash method).
+
+## Approach & Efficiency:
+Time complexity: For hashtable is O(n) worst case, best case O(n)
+Space complexity:  O(n) 
+
+
