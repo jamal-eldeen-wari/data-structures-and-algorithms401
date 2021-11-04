@@ -1,4 +1,5 @@
 import BST.*;
+import Hash.HashTable;
 import MergeSort.MergeSort;
 import Queue.QueueNode;
 import Stack.Stack;
@@ -224,12 +225,46 @@ public class App <T>{
 //        System.out.println(fizzBuzzTree(karyTree).getRoot().nodes.get(0).getData());
 
 
-        MergeSort mergeSort = new MergeSort();
-        int [] numbers = {8,4,23,42,16,15};
-        mergeSort.mergeSort(numbers);
-        for (int i = 0; i<numbers.length; i++){
-            System.out.println(Arrays.toString(numbers));
-        }
+//        MergeSort mergeSort = new MergeSort();
+//        int [] numbers = {8,4,23,42,16,15};
+//        mergeSort.mergeSort(numbers);
+//        for (int i = 0; i<numbers.length; i++){
+//            System.out.println(Arrays.toString(numbers));
+//        }
+
+        HashTable<String, Integer> movieRaiting = new HashTable<>();
+//        studentAllowances.add("John", 300);
+//        studentAllowances.add("Sally", 400);
+//        studentAllowances.add("Tom", 200);
+//        studentAllowances.add("Jade", 100);
+//        studentAllowances.add("Doa", 600);
+//        studentAllowances.add("Farah", 700);
+//        studentAllowances.add("Jason", 90000);
+//        studentAllowances.add("Morgan", 800);
+//        studentAllowances.add("Naim", 1000);
+//        studentAllowances.add("Qusai", 1500);
+//        studentAllowances.add("Deyaa", 10000);
+//
+        movieRaiting.add("Cobra Kai", 9);
+        movieRaiting.add("Breaking Bad", 10);
+        movieRaiting.add("Man in Black", 8);
+        movieRaiting.add("Rambo", 9);
+        movieRaiting.add("El Camino", 5);
+        movieRaiting.add("El ", 6);
+        movieRaiting.add(" Camino", 3);
+        movieRaiting.add("l Camino", 7);
+        movieRaiting.add("E Camino", 8);
+        movieRaiting.add("El Camin", 10);
+        movieRaiting.add("El Camno", 1);
+        System.out.println(movieRaiting);
+
+        System.out.println(movieRaiting.containsHash("Cobra Kai"));
+        System.out.println("get method "+ movieRaiting.get("Breaking Bad"));
+        System.out.println("getBucketIndex "+ movieRaiting.getBucketIndex("Rambo"));
+
+
+
+
     }
 
     public static KaryTree<String> fizzBuzzTree(KaryTree<Integer> node){
