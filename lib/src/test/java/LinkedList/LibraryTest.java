@@ -7,6 +7,7 @@ import BST.BinarySearch;
 import BST.BinarySearchNode;
 import BST.BinaryTree;
 import BST.KaryTree;
+import Hash.HashTable;
 import MergeSort.MergeSort;
 import Queue.Queue;
 import Stack.Stack;
@@ -323,5 +324,65 @@ class LibraryTest {
         int [] numbers = {4,2,8,11,3,6};
         mergeSort.mergeSort(numbers);
         assertEquals(Arrays.toString(numbers),Arrays.toString(numbers));
+    }
+
+    @Test void hashTableAddTest(){
+        HashTable<String, Integer> movieRaiting = new HashTable<>();
+        movieRaiting.add("Cobra Kai", 9);
+        movieRaiting.add("Breaking Bad", 10);
+        int size = movieRaiting.getSize();
+        assertEquals(size, movieRaiting.getSize());
+
+    }
+    @Test void hashTableGetValueFromSpecificKey(){
+        HashTable<String, Integer> movieRaiting = new HashTable<>();
+        movieRaiting.add("Cobra Kai", 9);
+        movieRaiting.add("El Camino", 10);
+        int value = movieRaiting.get("El Camino");
+        assertEquals(value,movieRaiting.get("El Camino") );
+    }
+
+    @Test void hashTableContainsTest(){
+        HashTable<String, Integer> movieRaiting = new HashTable<>();
+        movieRaiting.add("Cobra Kai", 9);
+        movieRaiting.add("El Camino", 10);
+        boolean contain = movieRaiting.containsHash("Cobra Kai");
+        assertEquals(contain,movieRaiting.containsHash("Cobra Kai"));
+    }
+
+    @Test void hashTestIndex(){
+        HashTable<String, Integer> movieRaiting = new HashTable<>();
+        movieRaiting.add("Man in Black", 9);
+        movieRaiting.add("El Camino", 10);
+        int index = movieRaiting.getBucketIndex("Man in Black");
+        assertEquals(index, movieRaiting.getBucketIndex("Man in Black"));
+    }
+
+    @Test void hashWithNull(){
+        HashTable<String, Integer> movieRaiting = new HashTable<>();
+        movieRaiting.add("Man in Black", 9);
+        movieRaiting.add("El Camino", 10);
+        assertNull(movieRaiting.get("handle"));
+    }
+    @Test void handleCollision(){
+        HashTable<String, Integer> movieRaiting = new HashTable<>();
+        movieRaiting.add("Man in Black", 9);
+        movieRaiting.add("Cobra Kai", 9);
+        movieRaiting.add("Rambo", 10);
+        movieRaiting.add("El Camino", 10);
+        int size = movieRaiting.getSize();
+        assertEquals(size, movieRaiting.getSize());
+
+    }
+
+    @Test void getFromCollision(){
+        HashTable<String, Integer> movieRaiting = new HashTable<>();
+        movieRaiting.add("Man in Black", 7);
+        movieRaiting.add("Cobra Kai", 9);
+        movieRaiting.add("Rambo", 10);
+        movieRaiting.add("Rambo", 10);
+        movieRaiting.add("El Camino", 10);
+        int value = movieRaiting.get("Rambo");
+        assertEquals(value,movieRaiting.get("Rambo"));
     }
 }
