@@ -385,4 +385,11 @@ class LibraryTest {
         int value = movieRaiting.get("Rambo");
         assertEquals(value,movieRaiting.get("Rambo"));
     }
+
+    @Test void TestRepeatWord(){
+        HashTable<String, Integer> text = new HashTable<>();
+        String textOfWords = "What does a man do ? man a man provides even if he is not appreciated";
+        String word = text.hashMapRepeatedWord(textOfWords);
+        assertEquals(word, text.hashMapRepeatedWord(textOfWords));
+    }
 }

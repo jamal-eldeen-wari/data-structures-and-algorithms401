@@ -1,6 +1,9 @@
 package Hash;
 
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class HashTable <K, V>{
@@ -104,6 +107,23 @@ public class HashTable <K, V>{
         }else {
             return get(key)!=null;
         }
+    }
+
+    public String hashMapRepeatedWord(String text){
+        Map<String,Integer> textCount = new HashMap<>();
+
+        String [] words = text.split(" ");
+        for (String word:words){
+            Integer integer=textCount.get(word);
+            if (integer == null){
+                textCount.put(word,1);
+            }else{
+                textCount.put(word, integer+1);
+                return word;
+            }
+        }
+
+        return null;
     }
 
     @Override

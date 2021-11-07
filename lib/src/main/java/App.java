@@ -18,6 +18,7 @@ import java.util.Queue;
 
 public class App <T>{
     public static void main(String[] args) {
+        System.out.println("Hello From Khair");
 ////        LinkedList linkedList = new LinkedList();
 ////        linkedList.insertNode("Jamal");
 ////        linkedList.insertNode("Qusai");
@@ -232,7 +233,7 @@ public class App <T>{
 //            System.out.println(Arrays.toString(numbers));
 //        }
 
-        HashTable<String, Integer> movieRaiting = new HashTable<>();
+//        HashTable<String, Integer> movieRaiting = new HashTable<>();
 //        studentAllowances.add("John", 300);
 //        studentAllowances.add("Sally", 400);
 //        studentAllowances.add("Tom", 200);
@@ -245,22 +246,27 @@ public class App <T>{
 //        studentAllowances.add("Qusai", 1500);
 //        studentAllowances.add("Deyaa", 10000);
 //
-        movieRaiting.add("Cobra Kai", 9);
-        movieRaiting.add("Breaking Bad", 10);
-        movieRaiting.add("Man in Black", 8);
-        movieRaiting.add("Rambo", 9);
-        movieRaiting.add("El Camino", 5);
-        movieRaiting.add("El ", 6);
-        movieRaiting.add(" Camino", 3);
-        movieRaiting.add("l Camino", 7);
-        movieRaiting.add("E Camino", 8);
-        movieRaiting.add("El Camin", 10);
-        movieRaiting.add("El Camno", 1);
-        System.out.println(movieRaiting);
+//        movieRaiting.add("Cobra Kai", 9);
+//        movieRaiting.add("Breaking Bad", 10);
+//        movieRaiting.add("Man in Black", 8);
+//        movieRaiting.add("Rambo", 9);
+//        movieRaiting.add("El Camino", 5);
+//        movieRaiting.add("El ", 6);
+//        movieRaiting.add(" Camino", 3);
+//        movieRaiting.add("l Camino", 7);
+//        movieRaiting.add("E Camino", 8);
+//        movieRaiting.add("El Camin", 10);
+//        movieRaiting.add("El Camno", 1);
+//        System.out.println(movieRaiting);
+//
+//        System.out.println(movieRaiting.containsHash("Cobra Kai"));
+//        System.out.println("get method "+ movieRaiting.get("Breaking Bad"));
+//        System.out.println("getBucketIndex "+ movieRaiting.getBucketIndex("Rambo"));
 
-        System.out.println(movieRaiting.containsHash("Cobra Kai"));
-        System.out.println("get method "+ movieRaiting.get("Breaking Bad"));
-        System.out.println("getBucketIndex "+ movieRaiting.getBucketIndex("Rambo"));
+
+        HashTable<String, Integer> text = new HashTable<>();
+       String textOfWords = "What does a man do ? man a man provides even if he is not appreciated";
+        System.out.println(text.hashMapRepeatedWord(textOfWords));
 
 
 
