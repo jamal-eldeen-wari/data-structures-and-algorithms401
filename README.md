@@ -228,3 +228,16 @@ Time complexity: For hashtable is O(n) worst case, best case O(n)
 Space complexity:  O(n) 
 
 
+# hashmap-repeated-word
+
+## Challenge:
+We need an algorithm that will gives the max number of occurences in a text for a word.
+
+## Approach and Effeciancy:
+Worst case is going to be O(n) time complexity
+
+space complexity: O(n)
+
+
+<img width="951" alt="HashRepeat" src="https://user-images.githubusercontent.com/83535791/140654327-e9047fcc-6d5c-4070-a413-a5492888f1ef.png">
+
