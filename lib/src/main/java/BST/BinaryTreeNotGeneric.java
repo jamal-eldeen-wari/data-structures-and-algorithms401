@@ -21,7 +21,7 @@ public class BinaryTreeNotGeneric {
         return getLeafCount(root);
     }
 
-   public  int getLeafCount(BinaryTreeNodeNotGeneric node)
+    public  int getLeafCount(BinaryTreeNodeNotGeneric node)
     {
         if (node == null)
             return 0;

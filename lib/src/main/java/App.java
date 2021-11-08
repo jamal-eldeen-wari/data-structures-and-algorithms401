@@ -197,16 +197,26 @@ public class App <T>{
 //        binaryTree2.root.getRightNode().setRightNode(new BinarySearchNode<>(30));
 //        int res2 = ((BinaryTree<Integer>) binaryTree2).getLeafCount();
 
-//        BinaryTreeNotGeneric binaryTreeNotGeneric = new BinaryTreeNotGeneric();
-//        binaryTreeNotGeneric.setRoot(new BinaryTreeNodeNotGeneric(20));
-//        binaryTreeNotGeneric.getRoot().setLeft(new BinaryTreeNodeNotGeneric(34));
-//        binaryTreeNotGeneric.getRoot().setRight(new BinaryTreeNodeNotGeneric(10));
-//
-//        int res1 = binaryTreeNotGeneric.getLeafCount();
-//
-//        BinaryTreeNotGeneric binaryTreeNotGeneric1 = new BinaryTreeNotGeneric();
-//        binaryTreeNotGeneric1.setRoot(new BinaryTreeNodeNotGeneric(20));
-//        binaryTreeNotGeneric1.getRoot().setLeft(new BinaryTreeNodeNotGeneric(34));
+        BinaryTree<Integer> tree1 = new BinaryTree<>();
+        BinaryTree<Integer> tree2 = new BinaryTree<>();
+
+        tree1.root = new Node<>(15);
+        tree1.root.left = new Node<>(5);
+        tree1.root.right = new Node<>(24);
+        tree1.root.right.right = new Node<>(48);
+        tree1.root.right.left = new Node<>(88);
+        tree1.root.right.left.right = new Node<>(6);
+
+
+        tree2.root = new Node<>(9);
+        tree2.root.left = new Node<>(20);
+        tree2.root.right = new Node<>(24);
+        tree2.root.right.right = new Node<>(48);
+        tree2.root.right.left = new Node<>(5);
+        tree2.root.right.left.right = new Node<>(6);
+
+        TreeIntersectionMain treeIntersectionMain = new TreeIntersectionMain();
+        System.out.println(Arrays.toString(treeIntersectionMain.intersection(tree1, tree2)));
 //
 //
 //        int res = binaryTreeNotGeneric1.getLeafCount();
@@ -264,9 +274,11 @@ public class App <T>{
 //        System.out.println("getBucketIndex "+ movieRaiting.getBucketIndex("Rambo"));
 
 
-        HashTable<String, Integer> text = new HashTable<>();
-       String textOfWords = "What does a man do ? man a man provides even if he is not appreciated";
-        System.out.println(text.hashMapRepeatedWord(textOfWords));
+//        HashTable<String, Integer> text = new HashTable<>();
+//       String textOfWords = "What does a man do ? man a man provides even if he is not appreciated";
+//        System.out.println(text.hashMapRepeatedWord(textOfWords));
+
+
 
 
 

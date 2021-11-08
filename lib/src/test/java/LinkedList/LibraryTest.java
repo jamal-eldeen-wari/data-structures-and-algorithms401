@@ -3,10 +3,7 @@
  */
 package LinkedList;
 
-import BST.BinarySearch;
-import BST.BinarySearchNode;
-import BST.BinaryTree;
-import BST.KaryTree;
+import BST.*;
 import Hash.HashTable;
 import MergeSort.MergeSort;
 import Queue.Queue;
@@ -297,17 +294,17 @@ class LibraryTest {
         assertEquals(value, binarySearch.findMaxValue());
     }
 
-    @Test void breadthTest(){
-
-        BinaryTree<Integer> binaryTree = new BinaryTree<>();
-        binaryTree.root = new BinarySearchNode<>(20);
-        binaryTree.root.setRightNode(new BinarySearchNode<>(10));
-        binaryTree.root.setLeftNode(new BinarySearchNode<>(34));
-        binaryTree.root.getRightNode().setRightNode(new BinarySearchNode<>(30));
-//        binaryTree.printLevelOrder();
-        int h = binaryTree.height(binaryTree.root);
-        assertEquals(h,binaryTree.height(binaryTree.root));
-    }
+//    @Test void breadthTest(){
+//
+//        BinaryTree<Integer> binaryTree = new BinaryTree<>();
+//        binaryTree.root = new BinarySearchNode<>(20);
+//        binaryTree.root.setRightNode(new BinarySearchNode<>(10));
+//        binaryTree.root.setLeftNode(new BinarySearchNode<>(34));
+//        binaryTree.root.getRightNode().setRightNode(new BinarySearchNode<>(30));
+////        binaryTree.printLevelOrder();
+//        int h = binaryTree.height(binaryTree.root);
+//        assertEquals(h,binaryTree.height(binaryTree.root));
+//    }
 
     @Test void karyTreeTest(){
         KaryTree<Integer> karyTree=new KaryTree<>(3);
@@ -391,5 +388,27 @@ class LibraryTest {
         String textOfWords = "What does a man do ? man a man provides even if he is not appreciated";
         String word = text.hashMapRepeatedWord(textOfWords);
         assertEquals(word, text.hashMapRepeatedWord(textOfWords));
+    }
+
+    @Test void similarityTest(){
+        BinaryTree<Integer> tree1 = new BinaryTree<>();
+        BinaryTree<Integer> tree2 = new BinaryTree<>();
+
+        tree1.root = new Node<>(15);
+        tree1.root.left = new Node<>(5);
+        tree1.root.right = new Node<>(24);
+        tree1.root.right.right = new Node<>(48);
+        tree1.root.right.left = new Node<>(88);
+        tree1.root.right.left.right = new Node<>(6);
+
+
+        tree2.root = new Node<>(9);
+        tree2.root.left = new Node<>(20);
+        tree2.root.right = new Node<>(24);
+        tree2.root.right.right = new Node<>(48);
+        tree2.root.right.left = new Node<>(5);
+        tree2.root.right.left.right = new Node<>(6);
+        TreeIntersectionMain treeIntersectionMain = new TreeIntersectionMain();
+       assertEquals("[5, 6, 24, 48]",Arrays.toString(treeIntersectionMain.intersection(tree1,tree2)));
     }
 }
