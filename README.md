@@ -241,3 +241,19 @@ space complexity: O(n)
 
 <img width="951" alt="HashRepeat" src="https://user-images.githubusercontent.com/83535791/140654327-e9047fcc-6d5c-4070-a413-a5492888f1ef.png">
 
+# Tree Intersections:
+
+## Challenge 
+Is to create a method that will find the similarity between two trees and return it to the user as an array.
+
+## Approach and Effeciency:
+Worst case is going to be O(n) time complexity
+
+space complexity: O(n)
+
+<img width="960" alt="2021-11-08" src="https://user-images.githubusercontent.com/83535791/140775941-9f550535-3d3b-4601-9956-a736de7d3032.png">
+
+
+
+
+
