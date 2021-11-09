@@ -254,6 +254,17 @@ space complexity: O(n)
 <img width="960" alt="2021-11-08" src="https://user-images.githubusercontent.com/83535791/140775941-9f550535-3d3b-4601-9956-a736de7d3032.png">
 
 
+# Left Join Two Hashmaps:
+
+## Challenge:
+We need an algorithm that will  LEFT JOIN two hashmaps into a single data structure.
+<img width="960" alt="2021-11-09" src="https://user-images.githubusercontent.com/83535791/140949052-0044d4a6-3183-4806-9c11-e5c347da1657.png">
+
+
+## Approach and Effeciency:
+Worst case is going to be O(n) time complexity since we are looping through the list.
+
+space complexity: O(n) since we are using a new data structure in our code and thats (List).
 
 
 
