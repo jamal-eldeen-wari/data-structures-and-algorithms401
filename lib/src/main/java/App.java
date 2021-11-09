@@ -1,5 +1,6 @@
 import BST.*;
 import Hash.HashTable;
+import Hash.JoinLeft;
 import MergeSort.MergeSort;
 import Queue.QueueNode;
 import Stack.Stack;
@@ -13,6 +14,7 @@ import Stack.StackNodeGeneric;
 import Stack.StackGeneric;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -277,6 +279,25 @@ public class App <T>{
 //        HashTable<String, Integer> text = new HashTable<>();
 //       String textOfWords = "What does a man do ? man a man provides even if he is not appreciated";
 //        System.out.println(text.hashMapRepeatedWord(textOfWords));
+        JoinLeft joinLeft = new JoinLeft();
+
+        HashMap hashMap1 = new HashMap();
+        hashMap1.put("fond", "enamored");
+        hashMap1.put("wrath", "anger");
+        hashMap1.put("diligent", "employed");
+        hashMap1.put("outfit", "garb");
+        hashMap1.put("guide", "usher");
+
+        HashMap hashMap2 = new HashMap();
+
+        hashMap2.put("fond", "averse");
+        hashMap2.put("wrath", "delight");
+        hashMap2.put("diligent", "idle");
+        hashMap2.put("guide", "follow");
+        hashMap2.put("flow", "jam");
+
+
+        System.out.println(joinLeft.joinLeft(hashMap1 , hashMap2));
 
 
 
