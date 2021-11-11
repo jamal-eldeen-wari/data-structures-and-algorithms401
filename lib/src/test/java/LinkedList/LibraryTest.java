@@ -4,6 +4,7 @@
 package LinkedList;
 
 import BST.*;
+import Graph.Graph;
 import Hash.HashTable;
 import Hash.JoinLeft;
 import MergeSort.MergeSort;
@@ -434,4 +435,33 @@ class LibraryTest {
 
         assertEquals("[diligent: employed idle, outfit: garb null, wrath: anger delight, guide: usher follow, fond: enamored averse]",joinLeft.joinLeft(hashMap1 , hashMap2).toString());
     }
+    @Test void GraphTestAdd(){
+        Graph graph = new Graph();
+        graph.addNode("Cobra Kai");
+        graph.addNode("Breaking Bad");
+        graph.addNode("Rambo");
+        assertEquals(graph.getNodes(), graph.getNodes());
+    }
+
+    @Test void GraphTestAddEdge(){
+        Graph graph = new Graph();
+        graph.addNode("Cobra Kai");
+        graph.addNode("Breaking Bad");
+        graph.addNode("Rambo");
+
+        graph.addEdge("Cobra Kai", "Breaking Bad");
+        graph.addEdge("Cobra Kai", "Rambo");
+        graph.addEdge("Cobra Kai", "Cobra Kai");
+        graph.addEdge("Breaking Bad", "Rambo");
+        assertEquals("[Vertex{label='Cobra Kai', weight=0}, Vertex{label='Rambo', weight=0}, Vertex{label='Breaking Bad', weight=0}]",graph.getNodes().toString());
+    }
+
+    @Test
+    public void emptyGraph(){
+
+        Graph graph = new Graph();
+        assertEquals(0,graph.size());
+
+    }
+
 }

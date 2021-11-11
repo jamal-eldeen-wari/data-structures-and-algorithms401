@@ -1,6 +1,6 @@
-package LinkedList;
-
-public class Main {
+//package LinkedList;
+//
+//public class Main {
 //    public static void main(String[] args) throws Exception {
 //        LinkedList linkedList = new LinkedList();
 //        linkedList.insertNode("Jamal");
@@ -20,6 +20,8 @@ public class Main {
 //        linkedList1.insertNode("Nour");
 //        linkedList1.insertNode("Jimmie");
 //
+//
+//
 //        linkedList.printList();
 //        linkedList1.printList();
 //
@@ -38,8 +40,8 @@ public class Main {
 ////        linkedList.printList();
 //
 ////        System.out.println(linkedList.includes("Jamal"));
-
-
-
+//
+//
+//
 //    }
-}
+//}

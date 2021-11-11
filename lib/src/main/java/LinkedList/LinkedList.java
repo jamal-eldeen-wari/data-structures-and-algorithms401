@@ -156,6 +156,23 @@ public class LinkedList extends LinkedListNode{
         }
         return zipLinkedList.toString();
     }
+    public java.util.LinkedList reverse(java.util.LinkedList linkedList2) {
+
+        LinkedListNode prev = null;
+        LinkedListNode current = head;
+
+        LinkedListNode next = null;
+        while (current != null) {
+
+            next = current.getNext();
+            current.setNext(prev);
+            prev = current;
+            current = next;
+
+        }
+        head = prev;
+        return linkedList2;
+    }
 
     public String presentData(){
         String list = "Head -->  ";
@@ -167,6 +184,39 @@ public class LinkedList extends LinkedListNode{
         return list;
     }
 
+//    public void sortList()
+//    {
+//
+//        // Node current will point to head
+//        LinkedListNode current = head;
+//               LinkedListNode index = null;
+//
+//        int temp;
+//
+//        if (head == null) {
+//            return;
+//        }
+//        else {
+//            while (current != null) {
+//
+//                index = current.getNext();
+//
+//                while (index != null) {
+//                    // If current node's data is greater
+//                    // than index's node data, swap the data
+//                    // between them
+//                    if (current.getData() > index.getData()) {
+//                        temp = current.getData();
+//                        current.getData() = index.getData();
+//                        index.getData() = temp;
+//                    }
+//
+//                    index = index.getNext();
+//                }
+//                current = current.getNext();
+//            }
+//        }
+//    }
     @Override
     public String toString() {
         return "LinkedList"+"{ "+presentData()+" }";

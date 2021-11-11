@@ -1,4 +1,5 @@
 import BST.*;
+import Graph.Graph;
 import Hash.HashTable;
 import Hash.JoinLeft;
 import MergeSort.MergeSort;
@@ -18,6 +19,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 
+
 public class App <T>{
     public static void main(String[] args) {
         System.out.println("Hello From Khair");
@@ -30,14 +32,17 @@ public class App <T>{
 ////        linkedList.insertNode("Mark");
 ////        linkedList.insertNode("Jeff");
 ////
-////        LinkedList linkedList1 = new LinkedList();
-////        linkedList1.insertNode("John");
-////        linkedList1.insertNode("Omar");
-////        linkedList1.insertNode("Dani");
-////        linkedList1.insertNode("Marcos");
-////        linkedList1.insertNode("Sara");
-////        linkedList1.insertNode("Nour");
-////        linkedList1.insertNode("Jimmie");
+//        LinkedList linkedList1 = new LinkedList();
+//        linkedList1.insertNode("John");
+//        linkedList1.insertNode("Omar");
+//        linkedList1.insertNode("Dani");
+//        linkedList1.insertNode("Marcos");
+//        linkedList1.insertNode("Sara");
+//        linkedList1.insertNode("Nour");
+//        linkedList1.insertNode("Jimmie");
+//
+//        LinkedList linkedList = new LinkedList();
+//        linkedList.in
 ////
 ////        linkedList.printList();
 ////        linkedList1.printList();
@@ -79,24 +84,27 @@ public class App <T>{
 ////        System.out.println(queue);
 ////        System.out.println(queue.peek());
 ////        System.out.println(queue.dequeue());
-//
-////        PsudoQueue psudoQueue = new PsudoQueue();
-////        psudoQueue.enqueue("J");
-////        psudoQueue.enqueue("A");
-////        psudoQueue.enqueue("M");
-////        psudoQueue.enqueue("A");
-////        psudoQueue.enqueue("L");
-////        psudoQueue.enqueue("W");
-////        psudoQueue.enqueue("A");
-////        psudoQueue.enqueue("R");
-////        psudoQueue.enqueue("I");
 ////
-////        System.out.println(psudoQueue.deQueue());
-////        System.out.println(psudoQueue.deQueue());
-////        System.out.println(psudoQueue.deQueue());
-////        System.out.println(psudoQueue.deQueue());
-////        System.out.println(psudoQueue.deQueue());
-////        System.out.println(psudoQueue.deQueue());
+//        PsudoQueue psudoQueue = new PsudoQueue();
+//        psudoQueue.enqueue("J");
+//        psudoQueue.enqueue("A");
+//        psudoQueue.enqueue("M");
+//        psudoQueue.enqueue("A");
+//        psudoQueue.enqueue("L");
+//        psudoQueue.enqueue("W");
+//        psudoQueue.enqueue("A");
+//        psudoQueue.enqueue("R");
+//        psudoQueue.enqueue("I");
+//////
+//        System.out.println(psudoQueue.deQueue());
+//        System.out.println(psudoQueue.deQueue());
+//        System.out.println(psudoQueue.deQueue());
+//        System.out.println(psudoQueue.deQueue());
+//        System.out.println(psudoQueue.deQueue());
+//        System.out.println(psudoQueue.deQueue());
+
+
+
 //
 //        QueueGeneric queueGeneric = new QueueGeneric();
 //
@@ -198,27 +206,27 @@ public class App <T>{
 //        binaryTree2.root.setLeftNode(new BinarySearchNode<>(34));
 //        binaryTree2.root.getRightNode().setRightNode(new BinarySearchNode<>(30));
 //        int res2 = ((BinaryTree<Integer>) binaryTree2).getLeafCount();
-
-        BinaryTree<Integer> tree1 = new BinaryTree<>();
-        BinaryTree<Integer> tree2 = new BinaryTree<>();
-
-        tree1.root = new Node<>(15);
-        tree1.root.left = new Node<>(5);
-        tree1.root.right = new Node<>(24);
-        tree1.root.right.right = new Node<>(48);
-        tree1.root.right.left = new Node<>(88);
-        tree1.root.right.left.right = new Node<>(6);
-
-
-        tree2.root = new Node<>(9);
-        tree2.root.left = new Node<>(20);
-        tree2.root.right = new Node<>(24);
-        tree2.root.right.right = new Node<>(48);
-        tree2.root.right.left = new Node<>(5);
-        tree2.root.right.left.right = new Node<>(6);
-
-        TreeIntersectionMain treeIntersectionMain = new TreeIntersectionMain();
-        System.out.println(Arrays.toString(treeIntersectionMain.intersection(tree1, tree2)));
+//
+//        BinaryTree<Integer> tree1 = new BinaryTree<>();
+//        BinaryTree<Integer> tree2 = new BinaryTree<>();
+//
+//        tree1.root = new Node<>(15);
+//        tree1.root.left = new Node<>(5);
+//        tree1.root.right = new Node<>(24);
+//        tree1.root.right.right = new Node<>(48);
+//        tree1.root.right.left = new Node<>(88);
+//        tree1.root.right.left.right = new Node<>(6);
+//
+//
+//        tree2.root = new Node<>(9);
+//        tree2.root.left = new Node<>(20);
+//        tree2.root.right = new Node<>(24);
+//        tree2.root.right.right = new Node<>(48);
+//        tree2.root.right.left = new Node<>(5);
+//        tree2.root.right.left.right = new Node<>(6);
+//
+//        TreeIntersectionMain treeIntersectionMain = new TreeIntersectionMain();
+//        System.out.println(Arrays.toString(treeIntersectionMain.intersection(tree1, tree2)));
 //
 //
 //        int res = binaryTreeNotGeneric1.getLeafCount();
@@ -279,32 +287,76 @@ public class App <T>{
 //        HashTable<String, Integer> text = new HashTable<>();
 //       String textOfWords = "What does a man do ? man a man provides even if he is not appreciated";
 //        System.out.println(text.hashMapRepeatedWord(textOfWords));
-        JoinLeft joinLeft = new JoinLeft();
+//        JoinLeft joinLeft = new JoinLeft();
+//
+//        HashMap hashMap1 = new HashMap();
+//        hashMap1.put("fond", "enamored");
+//        hashMap1.put("wrath", "anger");
+//        hashMap1.put("diligent", "employed");
+//        hashMap1.put("outfit", "garb");
+//        hashMap1.put("guide", "usher");
+//
+//        HashMap hashMap2 = new HashMap();
+//
+//        hashMap2.put("fond", "averse");
+//        hashMap2.put("wrath", "delight");
+//        hashMap2.put("diligent", "idle");
+//        hashMap2.put("guide", "follow");
+//        hashMap2.put("flow", "jam");
 
-        HashMap hashMap1 = new HashMap();
-        hashMap1.put("fond", "enamored");
-        hashMap1.put("wrath", "anger");
-        hashMap1.put("diligent", "employed");
-        hashMap1.put("outfit", "garb");
-        hashMap1.put("guide", "usher");
+//
+//        System.out.println(joinLeft.joinLeft(hashMap1 , hashMap2));
+//
+//        LinkedList linkedList   = new LinkedList();
+//        linkedList.add(0,"j");
+//        linkedList.add(1,"a");
+//        System.out.println(linkedList);
 
-        HashMap hashMap2 = new HashMap();
+//        String myStr = "What does a man do ? man a man provides even if he is not appreciated";
+//        String[] str = myStr.split(" ");
+//        Arrays.sort(str);
+//        System.out.println(Arrays.toString(str));
+//        int common = 0;
+//        int counter= 1;
+//        String word = str[0];
+//        String current = str[0];
+//        for(int i = 1; i<str.length; i++){
+//            if(str[i].equals(current)){
+//                counter++;
+//            }
+//            else{
+//                counter =1;
+//                current = str[i];
+//            }
+//            if(common<counter){
+//                common = counter;
+//                word = str[i];
+//            }
+//        }
+//        System.out.println(common + " x " + word);
 
-        hashMap2.put("fond", "averse");
-        hashMap2.put("wrath", "delight");
-        hashMap2.put("diligent", "idle");
-        hashMap2.put("guide", "follow");
-        hashMap2.put("flow", "jam");
+        Graph graph = new Graph();
+        graph.addNode("Cobra Kai");
+        graph.addNode("Breaking Bad");
+        graph.addNode("Rambo");
 
+        graph.addEdge("Cobra Kai", "Breaking Bad");
+        graph.addEdge("Cobra Kai", "Rambo");
+        graph.addEdge("Cobra Kai", "Cobra Kai");
+        graph.addEdge("Breaking Bad", "Rambo");
 
-        System.out.println(joinLeft.joinLeft(hashMap1 , hashMap2));
-
-
-
-
+        System.out.println("Nodes are: "+graph.getNodes());
+        System.out.println("Neighbors are: "+graph.getNeighbors("Cobra Kai"));
+        System.out.println("Size "+ graph.size());
 
 
     }
+
+
+
+
+
+
 
     public static KaryTree<String> fizzBuzzTree(KaryTree<Integer> node){
         KaryTree<String> newTree = new KaryTree<>(node.getK());
