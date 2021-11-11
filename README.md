@@ -266,5 +266,13 @@ Worst case is going to be O(n) time complexity since we are looping through the 
 
 space complexity: O(n) since we are using a new data structure in our code and thats (List).
 
+# Graphs:
+## Challenge:
+collection of nods that call vertices potentially connected by line segments named edges.
+
+## Approach and Effeciency:
+Time complexity: O(V + E)
+Space Complexity:  O(V + E)
+
 
 
