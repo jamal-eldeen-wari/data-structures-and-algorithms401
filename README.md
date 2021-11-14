@@ -276,6 +276,8 @@ Space Complexity:  O(V + E)
 
 
 # Breadth First Search Graph:
+![Whiteboard](https://user-images.githubusercontent.com/83535791/141691449-e04315e3-abcf-4508-81b7-8690059a93ef.png)
+
 ## Challenge:
 
 Is to create a method that traverse a graph using Breadth First Search
