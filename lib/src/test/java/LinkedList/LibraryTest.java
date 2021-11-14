@@ -464,4 +464,38 @@ class LibraryTest {
 
     }
 
+    @Test public void bfsNoEdgeTest(){
+        Graph graph = new Graph();
+
+        graph.addNode("Pandora");
+
+        assertEquals("[Pandora]",graph.breadthFirstSearch("Pandora").toString());
+    }
+
+    @Test public  void bfsOneEdgeTest(){
+        Graph graph = new Graph();
+
+        graph.addNode("Pandora");
+        graph.addNode("Narnia");
+        graph.addNode("Nabo");
+
+        graph.addEdge("Pandora", "Narnia");
+
+        assertEquals("[Pandora, Narnia]",graph.breadthFirstSearch( "Pandora").toString());
+    }
+    @Test public void bfsTest(){
+        Graph graph = new Graph();
+        graph.addNode("Cobra Kai");
+        graph.addNode("Breaking Bad");
+        graph.addNode("Rambo");
+
+        graph.addEdge("Cobra Kai", "Breaking Bad");
+        graph.addEdge("Cobra Kai", "Rambo");
+        graph.addEdge("Cobra Kai", "Cobra Kai");
+        graph.addEdge("Breaking Bad", "Rambo");
+
+        assertEquals("[Cobra Kai, Breaking Bad, Rambo]",graph.breadthFirstSearch("Cobra Kai").toString());
+
+    }
+
 }

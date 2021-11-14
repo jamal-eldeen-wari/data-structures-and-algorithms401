@@ -1,6 +1,7 @@
 package Graph;
 
 import java.util.*;
+import Queue.QueueGeneric;
 
 public class Graph {
 
@@ -26,6 +27,24 @@ public class Graph {
         adjacentVertex.get(vertex2).add(vertex1);
 
     }
+    public List<String> breadthFirstSearch(String vertex){
+        List<String> visited = new ArrayList<>();
+//        QueueGeneric<String> queue = new QueueGeneric<String>();
+        Queue<String> queue = new LinkedList<>();
+        queue.add(vertex);
+        visited.add(vertex);
+
+        while (!queue.isEmpty()){
+            for(Vertices vertices: getNeighbors(queue.poll())){
+                if (!visited.contains(vertices.data)){
+                    queue.add(vertices.data);
+                    visited.add(vertices.data);
+                }
+            }
+        }
+        return visited;
+    }
+
 
     public Set<Vertices> getNodes(){
         return adjacentVertex.keySet();

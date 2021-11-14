@@ -345,9 +345,10 @@ public class App <T>{
         graph.addEdge("Cobra Kai", "Cobra Kai");
         graph.addEdge("Breaking Bad", "Rambo");
 
-        System.out.println("Nodes are: "+graph.getNodes());
-        System.out.println("Neighbors are: "+graph.getNeighbors("Cobra Kai"));
-        System.out.println("Size "+ graph.size());
+//        System.out.println("Nodes are: "+graph.getNodes());
+//        System.out.println("Neighbors are: "+graph.getNeighbors("Cobra Kai"));
+//        System.out.println("Size "+ graph.size());
+        System.out.println("BFS Traversal Is "+ graph.breadthFirstSearch("Cobra Kai"));
 
 
     }
