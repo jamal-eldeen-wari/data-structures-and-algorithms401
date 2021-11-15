@@ -287,5 +287,12 @@ Is to create a method that traverse a graph using Breadth First Search
 Time complexity: O(n^2)
 Space Complexity:  O(n)
 
+# Business Trip:
+![Whiteboard](https://user-images.githubusercontent.com/83535791/141794809-bf13393b-8d80-430e-aaad-45cdf9cfb107.png)
 
+## Challenge:
+We need an algorithm that will calculate the cost of the business trips from a graph
 
+## Approach and Effeciency:
+Time complexity: O(n)
+Space Complexity:  O(1)
