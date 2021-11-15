@@ -217,6 +217,68 @@ public class LinkedList extends LinkedListNode{
 //            }
 //        }
 //    }
+
+    public LinkedList deleteDuplicated (LinkedList linkedList)
+    {
+       LinkedListNode current = head ;
+        LinkedListNode prev = current ;
+
+        while (linkedList != null )
+        {
+            if (prev.getData().equals(current.getData())) {
+                prev.setNext(prev.getNext().getNext());
+                current = current.getNext();
+            }
+            current = current.getNext();
+
+        }
+
+        return linkedList;
+
+    }
+
+//    public LinkedList deleteDublicated (LinkedList linkedList)
+//    {
+//
+//        LinkedListNode current = head ;
+//        LinkedListNode prev = current ;
+//
+//        while (linkedList != null )
+//        {
+//            if (prev.getData() == current.getData()) {
+//                prev.setNext(prev.getNext().getNext());
+//                current = current.getNext();
+//            }else {
+//
+//                prev = current.getNext();
+//            }
+//            current = current.getNext();
+//
+//        }
+//
+//        return linkedList;
+//
+//    }
+
+    public LinkedList deleteDublicated (LinkedList linkedList) {
+
+    LinkedListNode current = head ;
+    LinkedListNode prev = head ;
+
+
+    while (current != null ) {
+        if (prev.getData() == current.getData()){
+            prev.setNext(prev.getNext().getNext());
+            current = current.getNext();
+        }
+        prev = current;
+        current = current.getNext();
+    }
+
+    return linkedList;
+
+}
+
     @Override
     public String toString() {
         return "LinkedList"+"{ "+presentData()+" }";

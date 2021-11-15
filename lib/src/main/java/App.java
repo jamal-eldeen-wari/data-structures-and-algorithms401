@@ -16,7 +16,7 @@ import Stack.StackGeneric;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.LinkedList;
+import LinkedList.LinkedList;
 import java.util.Queue;
 
 
@@ -348,7 +348,41 @@ public class App <T>{
 //        System.out.println("Nodes are: "+graph.getNodes());
 //        System.out.println("Neighbors are: "+graph.getNeighbors("Cobra Kai"));
 //        System.out.println("Size "+ graph.size());
-        System.out.println("BFS Traversal Is "+ graph.breadthFirstSearch("Cobra Kai"));
+//        System.out.println("BFS Traversal Is "+ graph.breadthFirstSearch("Cobra Kai"));
+        Graph CC37 = new Graph();
+
+        CC37.addNode("Pandora");
+        CC37.addNode("Arendelle");
+        CC37.addNode("Metroville");
+        CC37.addNode("Monstroplolis");
+        CC37.addNode("Narnia");
+        CC37.addNode("Naboo");
+
+        CC37.edgeWeight("Pandora", "Arendelle", 150);
+        CC37.edgeWeight("Arendelle", "Metroville",99);
+        CC37.edgeWeight("Arendelle", "Monstroplolis",42);
+        CC37.edgeWeight("Metroville", "Narnia",37);
+        CC37.edgeWeight("Metroville", "Naboo",26);
+        CC37.edgeWeight("Metroville", "Monstroplolis",105);
+        CC37.edgeWeight("Monstroplolis", "Naboo",73);
+        CC37.edgeWeight("Narnia", "Naboo",250);
+
+        String cityNames [] = {"Pandora","Arendelle","Metroville"};
+
+        System.out.println("Trip Cost Is: "+CC37.businessTrip(CC37,cityNames));
+
+
+
+//
+//        LinkedList linkedList = new LinkedList();
+//        linkedList.insertNode("Khair");
+//        linkedList.insertNode("Mohammad");
+//        linkedList.insertNode("Heba");
+//        linkedList.insertNode("Nawal");
+//        linkedList.insertNode("Nawal");
+
+//        System.out.println(linkedList.deleteDublicated(linkedList));
+
 
 
     }
@@ -359,32 +393,32 @@ public class App <T>{
 
 
 
-    public static KaryTree<String> fizzBuzzTree(KaryTree<Integer> node){
-        KaryTree<String> newTree = new KaryTree<>(node.getK());
-        Queue<KaryTreeNode<Integer>> newQueue = new LinkedList<>();
-        if(node.getRoot() != null){
-            newQueue.add(node.getRoot());
-            while(!newQueue.isEmpty()){
-                KaryTreeNode<Integer> current = newQueue.poll();
-                String currentValue;
-                if(current.getData() % 3 == 0 && current.getData() % 5 == 0)
-                    currentValue = "FizzBuzz";
-                else if(current.getData() % 3 == 0){
-                    currentValue="Fizz";
-                }
-                else if(current.getData() % 5 == 0){
-                    currentValue="Buzz";
-                }
-                else{
-                    currentValue=current.getData().toString();
-                }
-                newTree.add(currentValue);
-                if(! current.nodes.isEmpty()){
-                    newQueue.addAll(current.nodes);
-                }
-            }
-        }
-        return newTree;
-    }
+//    public static KaryTree<String> fizzBuzzTree(KaryTree<Integer> node){
+//        KaryTree<String> newTree = new KaryTree<>(node.getK());
+//        Queue<KaryTreeNode<Integer>> newQueue = new LinkedList<>();
+//        if(node.getRoot() != null){
+//            newQueue.add(node.getRoot());
+//            while(!newQueue.isEmpty()){
+//                KaryTreeNode<Integer> current = newQueue.poll();
+//                String currentValue;
+//                if(current.getData() % 3 == 0 && current.getData() % 5 == 0)
+//                    currentValue = "FizzBuzz";
+//                else if(current.getData() % 3 == 0){
+//                    currentValue="Fizz";
+//                }
+//                else if(current.getData() % 5 == 0){
+//                    currentValue="Buzz";
+//                }
+//                else{
+//                    currentValue=current.getData().toString();
+//                }
+//                newTree.add(currentValue);
+//                if(! current.nodes.isEmpty()){
+//                    newQueue.addAll(current.nodes);
+//                }
+//            }
+//        }
+//        return newTree;
+//    }
 }
 
