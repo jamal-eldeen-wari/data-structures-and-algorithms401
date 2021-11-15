@@ -497,5 +497,27 @@ class LibraryTest {
         assertEquals("[Cobra Kai, Breaking Bad, Rambo]",graph.breadthFirstSearch("Cobra Kai").toString());
 
     }
+    @Test public void TestTrip(){
+        Graph CC37 = new Graph();
+
+        CC37.addNode("Pandora");
+        CC37.addNode("Arendelle");
+        CC37.addNode("Metroville");
+        CC37.addNode("Monstroplolis");
+        CC37.addNode("Narnia");
+        CC37.addNode("Naboo");
+
+        CC37.edgeWeight("Pandora", "Arendelle", 150);
+        CC37.edgeWeight("Arendelle", "Metroville",99);
+        CC37.edgeWeight("Arendelle", "Monstroplolis",42);
+        CC37.edgeWeight("Metroville", "Narnia",37);
+        CC37.edgeWeight("Metroville", "Naboo",26);
+        CC37.edgeWeight("Metroville", "Monstroplolis",105);
+        CC37.edgeWeight("Monstroplolis", "Naboo",73);
+        CC37.edgeWeight("Narnia", "Naboo",250);
+
+        String cityNames [] = {"Pandora","Arendelle","Metroville"};
+        assertEquals(249, CC37.businessTrip(CC37,cityNames));
+    }
 
 }
