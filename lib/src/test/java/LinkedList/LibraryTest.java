@@ -520,4 +520,30 @@ class LibraryTest {
         assertEquals(249, CC37.businessTrip(CC37,cityNames));
     }
 
+    @Test public void depthFirstTest(){
+        Graph CC38 = new Graph();
+
+        CC38.addNode("A");
+        CC38.addNode("B");
+        CC38.addNode("C");
+        CC38.addNode("D");
+        CC38.addNode("E");
+        CC38.addNode("F");
+        CC38.addNode("G");
+        CC38.addNode("H");
+
+        CC38.addEdge("A", "D");
+        CC38.addEdge("A", "B");
+        CC38.addEdge("B", "D");
+        CC38.addEdge("B", "C");
+        CC38.addEdge("C", "G");
+        CC38.addEdge("D", "F");
+        CC38.addEdge("D", "H");
+        CC38.addEdge("D", "E");
+        CC38.addEdge("F", "H");
+
+
+        assertEquals("[A, B, C, G, D, E, H, F]",CC38.depthFirstSearch("A").toString());
+
+    }
 }

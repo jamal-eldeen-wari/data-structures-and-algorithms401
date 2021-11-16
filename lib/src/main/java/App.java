@@ -335,20 +335,20 @@ public class App <T>{
 //        }
 //        System.out.println(common + " x " + word);
 
-        Graph graph = new Graph();
-        graph.addNode("Cobra Kai");
-        graph.addNode("Breaking Bad");
-        graph.addNode("Rambo");
-
-        graph.addEdge("Cobra Kai", "Breaking Bad");
-        graph.addEdge("Cobra Kai", "Rambo");
-        graph.addEdge("Cobra Kai", "Cobra Kai");
-        graph.addEdge("Breaking Bad", "Rambo");
+//        Graph graph = new Graph();
+//        graph.addNode("Cobra Kai");
+//        graph.addNode("Breaking Bad");
+//        graph.addNode("Rambo");
+//
+//        graph.addEdge("Cobra Kai", "Breaking Bad");
+//        graph.addEdge("Cobra Kai", "Rambo");
+//        graph.addEdge("Cobra Kai", "Cobra Kai");
+//        graph.addEdge("Breaking Bad", "Rambo");
 
 //        System.out.println("Nodes are: "+graph.getNodes());
 //        System.out.println("Neighbors are: "+graph.getNeighbors("Cobra Kai"));
 //        System.out.println("Size "+ graph.size());
-//        System.out.println("BFS Traversal Is "+ graph.breadthFirstSearch("Cobra Kai"));
+//        System.out.println("BFS Traversal Is "+ graph.depthFirstSearch("Cobra Kai"));
         Graph CC37 = new Graph();
 
         CC37.addNode("Pandora");
@@ -370,7 +370,24 @@ public class App <T>{
         String cityNames [] = {"Pandora","Arendelle","Metroville"};
 
         System.out.println("Trip Cost Is: "+CC37.businessTrip(CC37,cityNames));
+//        System.out.println("BFS Traversal Is "+ graph.depthFirstSearch("Pandora"));
 
+        Graph CC38 = new Graph();
+
+        CC38.addNode("A");
+        CC38.addNode("B");
+        CC38.addNode("C");
+        CC38.addNode("D");
+        CC38.addNode("F");
+
+
+        CC38.addEdge("A", "B");
+        CC38.addEdge("A", "C");
+        CC38.addEdge("B", "D");
+        CC38.addEdge("B", "C");
+        CC38.addEdge("C", "F");
+
+        System.out.println("Depth First Search:  " + CC38.depthFirstSearch("A"));
 
 
 //

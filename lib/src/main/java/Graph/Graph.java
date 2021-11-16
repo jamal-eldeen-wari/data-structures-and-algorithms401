@@ -51,6 +51,24 @@ public class Graph {
         return visited;
     }
 
+
+   public List<String> depthFirstSearch(String vertex) {
+       List<String> visited = new ArrayList<>();
+        Stack<String> stack = new Stack<>();
+        stack.push(vertex);
+
+        while (!stack.isEmpty()) {
+            String node = stack.pop();
+            if (!visited.contains(node)) {
+                visited.add(node);
+                for (Vertices vertices : getNeighbors(node)) {
+                    stack.push(vertices.data);
+                }
+            }
+        }
+
+        return visited;
+    }
     int cost;
     public int businessTrip(Graph graph, String [] cityNames){
          cost = 0;
