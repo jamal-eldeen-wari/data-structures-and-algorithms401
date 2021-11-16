@@ -296,3 +296,16 @@ We need an algorithm that will calculate the cost of the business trips from a g
 ## Approach and Effeciency:
 Time complexity: O(n)
 Space Complexity:  O(1)
+
+# Depth First Search:
+
+![Whiteboard (1)](https://user-images.githubusercontent.com/83535791/142000101-a9f1c130-b2ef-4fb6-8dbf-597a8d9d059a.png)
+
+
+## Challenge: 
+Is to create a method that traverse a graph using Depth First Search
+
+## Approach and Effeciency:
+
+Time complexity: O(n^2)
+Space Complexity:  O(n)
